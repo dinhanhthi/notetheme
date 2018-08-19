@@ -16,6 +16,8 @@ I have modified a lot from Matjek so that we have this theme for **the only purp
 - Integrate **[DataCamp Light](https://github.com/datacamp/datacamp-light)** which supports embedding side-by-side Python/R code enviroment (see [demo](https://cdn.datacamp.com/dcl-react/standalone-example.html) for this)
 - Supoort **search** on site quickly ([demo](http://dinhanhthi.github.io/NoteTheme/search?q=welcome))
 - Support **tags and categories** for posts.
+- Mobile friendly
+- Search engine friendly
 
 
 ## How to install
