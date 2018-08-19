@@ -1,0 +1,29 @@
+---
+---
+.thi-step
+  .step
+    counter-increment: thi-step
+    padding-left: 31px
+    padding-bottom: 30px
+    border-left: 3px solid #009688 
+    counter-reset: step
+
+  .step:last-child
+    padding-bottom: 10px
+
+
+.thi-step
+  .step:before
+    border-radius: 50%
+    content: counter(thi-step)
+    font-size: 80%
+    height: 2.1rem
+    width: 2.1rem
+    line-height: 2rem
+    display: block
+    text-align: center
+    background-color: #009688
+    border: 1px solid #fff
+    color: white
+    font-weight: 500
+    margin: -3px -10px -50px -50px

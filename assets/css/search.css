@@ -1,0 +1,30 @@
+#search-results {
+	padding-left: 0!important;
+	li {
+		margin: 10px 0;
+		padding: 15px;
+		border: 2px solid #ddd;
+		h4 {
+			margin: 0 0 10px 0;
+			font-size: 1.3rem;
+		}
+
+		p {
+			line-height: 1.5;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	h4 {
+		font-weight: normal;
+	}
+}
+
+#search-query {
+	font-weight: bold;
+}
+
+.search-result-title{
+	font-size: 110%;
+}

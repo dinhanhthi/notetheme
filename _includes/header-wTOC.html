@@ -1,0 +1,30 @@
+{% include header-nav.html %}
+<div class="container">
+  <a href="#" data-activates="slide-out" class="button-collapse top-nav full hide-on-large-only">
+    <i class="material-icons">menu</i>
+  </a>
+</div>
+<div id="slide-out" class="side-nav fixed">
+  <div>
+    <div class="userView thi-userView">
+      <div class="background"></div>
+        <a href="{{site.github_profile}}">
+          <img style="display:inherit;" class="circle z-depth-2" src="{{site.baseurl}}/assets/res/user.png">
+        </a>
+      <span style="font-size: larger;" class="white-text name">{{site.user}}</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="https://dinhanhthi.com">dinhanhthi.com</a></span>
+    </div>
+  </div>
+  <div style="padding: 10px;">
+    <form action="{{ site.baseurl }}/search" method="get">
+      <input class="search-sidebar" type="search" name="q" {% if include.add_id %}id="search-input"{% endif %} placeholder="tìm gì đó?" autofocus>
+      <input type="submit" value="Search" style="display: none;">
+    </form>
+  </div>
+  <div id="toc-bar">
+    <div class="toc-bar-title">
+      Trong bài này
+    </div>
+    {% include toc-sidebar.html html=content %}
+  </div>
+</div>

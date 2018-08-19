@@ -1,0 +1,74 @@
+<style type="text/css">
+.related-posts{
+  border: 3px dotted #2e87e7;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 10px 10px 0 10px;
+}
+.related-posts span{
+  font-size: 130%;
+  font-weight: 500;
+  color: #2e87e7;
+}
+.related-posts ul{
+  margin-top: 5px!important;
+}
+.thi-icon{
+  float: left;
+  line-height: inherit;
+  margin-right: 5px;
+  margin-left: 2px;
+  color: #2e87e7;
+}
+</style>
+
+<div class="related-posts">
+  <i class="material-icons thi-icon">grade</i><span>Còn bài khác hay lắm nè bạn ơi</span>
+  {% assign RELATED_POSTS_THRESHOLD = 4 %}
+  <ul>
+    {% assign related_post_count = 0 %}
+    {% for post in site.related_posts %}
+      {% if related_post_count == RELATED_POSTS_THRESHOLD %}
+        {% break %}
+      {% endif %}
+      {% for tag in post.tags %}
+        {% if page.tags contains tag %}
+          <li>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+            </a>
+            <small>{{ post.date | date_to_string }}</small>
+          </li>
+          {% assign related_post_count = related_post_count | plus: 1 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+
+    {% assign posts_left = RELATED_POSTS_THRESHOLD | minus: related_post_count %}
+    {% unless posts_left == 0 %}
+      {% for post in site.related_posts %}
+        {% if posts_left == 0 %}
+          {% break %}
+        {% endif %}
+
+        {% assign already_related = false %}
+        {% for tag in post.tags %}
+          {% if page.tags contains tag %}
+            {% assign already_related = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% unless already_related %}
+          {% assign posts_left = posts_left | minus: 1 %}
+          <li>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+            </a>
+            <small>{{ post.date | date_to_string }}</small>
+          </li>
+        {% endunless %}
+      {% endfor %}
+    {% endunless %}
+  </ul>
+</div>

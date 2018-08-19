@@ -1,0 +1,33 @@
+title: NoteTheme
+description: You cannot remember everything.
+baseurl: "NoteTheme"
+url: "http://dinhanhthi.com"
+permalink: /:title
+repository: dinhanhthi/NoteTheme
+paginate: 28
+
+# MatJek specific configurations
+github_profile: "https://dinhanhthi.com"
+user: "Dinh Anh Thi"
+user_email: "dinhanhthimail@gmail.com"
+contact_url: "https://dinhanhthi.com"
+google_tracking_id: ""
+google_site_verification: ""
+disqus_shortname: this-site
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-redirect-from
+exclude:
+  - Gemfile
+  - Gemfile.lock
+sass:
+  style: compressed
+future: true

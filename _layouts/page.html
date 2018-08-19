@@ -1,0 +1,22 @@
+---
+layout: default
+css: ["page.css"]
+---
+
+<header>
+	{% if page.toc %}
+		{% include header-wTOC.html %}
+	{% else %}
+		{% include header-wtTOC.html %}
+	{% endif %}
+</header>
+<main>
+	<div class="container">
+	  <div id="page-info">
+		  <h2>{{page.title}}</h2>
+		</div>
+		<div class="row">
+		  {{ content }}
+		</div>
+	</div>
+</main>

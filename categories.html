@@ -1,0 +1,55 @@
+---
+layout: page
+title: "Bài đăng theo mục"
+css: ["categories.css","page.css"]
+---
+
+<div style="margin-bottom: 1rem;">
+	Nhấn vào thẻ bạn muốn xem các bài đăng.
+</div>
+
+<div class="col s12 cat-div">
+  <div class="cat-list">
+    {% for cat in site.categories %}
+    	{% for catDat in site.data.categories %}
+	      {% if catDat.slug == cat[0] %}
+	        {% assign catego = catDat %}
+	      {% endif %}
+	    {% endfor %}
+	    {% if catego %}
+		    {% capture test %}{{cat[0] | slice: 0}}{% endcapture %}
+		    {% capture testup %}{{cat[0] | slice: 0 | upcase}}{% endcapture %}
+		    <a class="cat-chip" href="#{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{ catego.name }}</div></a>
+	    {% endif %}
+    {% endfor %}
+  </div>
+  <div class="divider"></div>
+  <div class="cat-index">
+    {% for cat in site.categories %}
+	    {% for catDat in site.data.categories %}
+	      {% if catDat.slug == cat[0] %}
+	        {% assign catego = catDat %}
+	      {% endif %}
+	    {% endfor %}
+	    {% if catego %}
+		    {% capture test %}{{cat[0] | slice: 0}}{% endcapture %}
+		    {% capture testup %}{{cat[0] | slice: 0 | upcase}}{% endcapture %}
+		    <div class="tag-sec" id="{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}">
+					<h3 class="cat-tag" class="text-cap">{{ catego.name }}</h3>
+					<div class="thi-columns">
+							<ul class="cat-post">
+								{% for post in cat[1] %}
+								<a class="post-title" href="{{site.baseurl}}{{post.url}}">
+									<li>
+										{{post.title}}
+										<small class="post-date">{{post.date | date_to_string}}</small>
+									</li>
+								</a>
+								{% endfor %}
+							</ul>
+					</div>
+				</div>
+	    {% endif %}
+    {% endfor %}
+  </div>
+</div>
