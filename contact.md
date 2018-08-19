@@ -1,12 +1,10 @@
 ---
 layout: page
-title: "Liên hệ"
+title: Contact Thi
 css: ["contact.css"]
+comment: 1
 ---
 
-Mọi đóng góp hay có ý kiến, bạn vui lòng liên hệ Đinh Anh Thi,
+You can contact me at [dinhanhthimail@gmail.com](mailto:dinhanhthimail@gmail.com).
 
-- **Email** : [dinhanhthimail@gmail.com](mailto:dinhanhthimail@gmail.com). 
-- **Trang web cá nhân** : [dinhanhthi.com](http://dinhanhthi.com).
-- **Trang dự án** : [math2it.com](http://math2it.com) (người sáng lập và điều hành).
-- **Math2IT group**: [fb.com/groups/math2it](https://fb.com/groups/math2it)
+PS. If you have time, welcome to [my site](https://dinhanhthi.com).

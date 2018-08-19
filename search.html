@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Tìm kiếm
+title: Search on this page
 js: ["lunr.min.js","search.js"]
 css: ["page.css","search.css"]
 maths: 1
@@ -8,7 +8,7 @@ maths: 1
 	
 {% include search_form.html %}
 
-<p style="opacity: 0.6; color: darkmagenta; font-size: 1.2rem;margin-bottom: 20px;" ><span id="search-process">Đang tải</span> kết quả <span id="search-query-container" style="display: none;">cho từ khóa "<strong id="search-query"></strong>"</span></p>
+<p style="opacity: 0.6; color: darkmagenta; font-size: 1.2rem;margin-bottom: 20px;" ><span id="search-process">Loading</span> results <span id="search-query-container" style="display: none;">for keyword "<strong id="search-query"></strong>"</span></p>
 <ul id="search-results"></ul>
 
 <script>

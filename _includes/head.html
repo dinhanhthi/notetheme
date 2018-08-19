@@ -4,48 +4,52 @@
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese" rel="stylesheet">
   <meta name="google-site-verification" content="8zqeFQNuNAWS7ye6oN69hdEeYC_RsDyAlhht79xtAQo" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:image" content="{{site.baseurl}}/assets/res/banner.png" />
+  <meta property="og:image" content="{{ site.baseurl }}{{ site.banner }}" />
   <meta name="robots" content="noindex">
   <title>
     {% if page.title %}
-      {{ page.title | escape }} | Notes of Thi
+      {{ page.title | escape }} | {{ site.title }}
     {% else %}
       {{ site.title | escape }} | You cannot remember everything
     {% endif %}
   </title>
 
   {% if page.maths %}
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-  </script>
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
   {% endif %}
 
-  <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/assets/res/favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}{{ site.favicon }}">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
   <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
 
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/thi.css">
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/thi_scss.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/thi.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/thi_scss.css">
+
   {% for css in layout.css %}
-  {% if css contains "//" %}
-  <link rel="stylesheet" href="{{css}}">
-  {% else %}
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
-  {% endif %}
+    {% if css contains "//" %}
+      <link rel="stylesheet" href="{{ css }}">
+    {% else %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ css }}">
+    {% endif %}
   {% endfor %}
+
   {% for css in page.css %}
-  {% if css contains "//" %}
-  <link rel="stylesheet" href="{{css}}">
-  {% else %}
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/{{css}}">
-  {% endif %}
+    {% if css contains "//" %}
+      <link rel="stylesheet" href="{{ css }}">
+    {% else %}
+      <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ css }}">
+    {% endif %}
   {% endfor %}
-  <link rel="stylesheet" href="{{site.baseurl}}/assets/css/syntax.css">
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{site.baseurl}}/feed.xml">
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{site.baseurl}}/sitemap.xml">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/syntax.css">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.baseurl }}/feed.xml">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ site.baseurl }}/sitemap.xml">
+  
   {% seo title=false %}
 </head>

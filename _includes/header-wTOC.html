@@ -8,22 +8,22 @@
   <div>
     <div class="userView thi-userView">
       <div class="background"></div>
-        <a href="{{site.github_profile}}">
-          <img style="display:inherit;" class="circle z-depth-2" src="{{site.baseurl}}/assets/res/user.png">
+        <a href="https://github.com/{{site.user.github}}">
+          <img style="display:inherit;" class="circle z-depth-2" src="{{ site.baseurl}}{{site.user.avatar }}">
         </a>
-      <span style="font-size: larger;" class="white-text name">{{site.user}}</span>
-      <span class="white-text email"><a style="color: #bdbdbd;" href="https://dinhanhthi.com">dinhanhthi.com</a></span>
+      <span style="font-size: larger;" class="white-text name">{{ site.user.name }}</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="{{ site.user.website }}">{{ site.user.website | prepend: "http://" }}</a></span>
     </div>
   </div>
   <div style="padding: 10px;">
     <form action="{{ site.baseurl }}/search" method="get">
-      <input class="search-sidebar" type="search" name="q" {% if include.add_id %}id="search-input"{% endif %} placeholder="tìm gì đó?" autofocus>
+      <input class="search-sidebar" type="search" name="q" {% if include.add_id %}id="search-input"{% endif %} placeholder="search something?" autofocus>
       <input type="submit" value="Search" style="display: none;">
     </form>
   </div>
   <div id="toc-bar">
     <div class="toc-bar-title">
-      Trong bài này
+      In this post
     </div>
     {% include toc-sidebar.html html=content %}
   </div>

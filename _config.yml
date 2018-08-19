@@ -6,11 +6,16 @@ permalink: /:title
 repository: dinhanhthi/NoteTheme
 paginate: 28
 
+banner: "/assets/res/banner.png" # site banner (load when someone share your page url)
+favicon: "/assets/res/favicon.png" # site's favicon (icon left side of your page)
+
 # MatJek specific configurations
-github_profile: "https://dinhanhthi.com"
-user: "Dinh Anh Thi"
-user_email: "dinhanhthimail@gmail.com"
-contact_url: "https://dinhanhthi.com"
+user: 
+  name: "Dinh Anh Thi"
+  email: "dinhanhthimail@gmail.com"
+  website: "dinhanhthi.com"
+  avatar: "/assets/res/user.png"
+  github: "dinhanhthi"
 google_tracking_id: ""
 google_site_verification: ""
 disqus_shortname: this-site
@@ -25,9 +30,12 @@ gems:
   - jekyll-sitemap
   - jekyll-archives
   - jekyll-redirect-from
+
 exclude:
   - Gemfile
   - Gemfile.lock
+
 sass:
   style: compressed
-future: true
+
+  future: true
