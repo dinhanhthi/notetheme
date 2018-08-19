@@ -73,7 +73,7 @@ layout: null
 			});
 
 			searchResultsEl.innerHTML = resultsHTML;
-			searchProcessEl.innerText = "Tìm thấy";
+			searchProcessEl.innerText = "Found some";
 		} else {
 			searchResultsEl.style.display = "none";
 			searchProcessEl.innerText = "Không có";
