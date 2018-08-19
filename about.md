@@ -10,5 +10,5 @@ Hi! Glad to see you here. I'm [Thi](https://dinhanhthi.com). I created this site
 I modified much from the theme MatJek so that you can use it for note taking. Please read [Welcome to NoteTheme](/welcome-to-notetheme) for more information and [How to use NoteTheme](/how-to-use-notetheme) to know how to use and modify this theme for your purpose.
 
 <div class="thi-signature">
-    {{ site.user.name }
+    {{ site.user.name }}
 </div>
