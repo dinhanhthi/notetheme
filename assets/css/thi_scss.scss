@@ -73,7 +73,7 @@ p{
   h3{
     font-size: 1.3rem;
     color: #333;
-    margin-top: 2rem;
+    margin-top: 2.2rem;
   }
 
   // numering
@@ -102,9 +102,6 @@ p{
       text-align: center;
       box-shadow: 0px 0 5px 0;
       margin: auto;
-    }
-    &:first-child{
-      margin-top: 2rem;
     }
   }
   img+em{
@@ -212,6 +209,9 @@ hr{
     color: coral;
     font-size: 2rem;
     font-weight: 500!important;
+  }
+  &+ .divider{
+    margin-bottom: 2rem;
   }
 } 
 
@@ -386,7 +386,6 @@ p + div.highlighter-rouge{
 }
 
 .highlight{
-  border-radius: 5px;
   .err{
     background-color: initial!important;
     background: none!important;
@@ -395,7 +394,7 @@ p + div.highlighter-rouge{
 
 li code, p code{
 	background-color: #e7e9ee;
-	color: #dc0045;
+	color: #0a227d;
 	padding: 1px 4px;
 	border-radius: 4px;
 	font-size: 95%;
@@ -491,4 +490,70 @@ pre{
 
 .MathJax{
 	font-weight: lighter;
+}
+
+
+// tip 
+.thi-tip{
+	background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 15px;
+  display: table;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+// warning
+.thi-warning{
+	background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 15px;
+  display: table;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.thi-step{
+  margin: 2rem 0;
+  .step{
+    counter-increment: thi-step;
+    padding-left: 31px;
+    padding-bottom: 30px;
+    border-left: 3px solid #009688;
+    counter-reset: step;
+    &:last-child{
+      padding-bottom: 10px
+    }
+    &:before{
+      border-radius: 50%;
+      content: counter(thi-step);
+      font-size: 80%;
+      height: 2.1rem;
+      width: 2.1rem;
+      line-height: 2rem;
+      display: block;
+      text-align: center;
+      background-color: #009688;
+      border: 1px solid #fff;
+      color: white;
+      font-weight: 500;
+      margin: -3px -10px -50px -50px;
+    }
+  }
+}
+
+// margin
+@media (min-width: 991px){
+  .mr-l-1{
+    margin-right: 0.5rem!important;
+  }
+  .ml-l-1{
+    margin-left: 0.5rem!important;
+  }
 }

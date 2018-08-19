@@ -7,13 +7,17 @@ toc: 1
 comment: 1
 ---
 
+In this tutorial, I suppose that you have already [installed NoteTheme]({{ site.baseurl }}/how-to-install-notetheme), just follow the ones you need and don't forget to leave a comment below.
+
+{% include tip.html content="I'm not a native English speaker, please ignore my bad expressions." %}
+
 {% include toc.html %}
 
-## Chèn code
+## Insert code
 
-### Highlight cho code
+### Syntax highlighting
 
-Có các ngôn ngữ : `ruby`, `python`, `c`, `matlab`, `latex`, `html`, `css`, `javascript`.
+Available languages : `ruby`, `python`, `c`, `matlab`, `latex`, `html`, `css`, `javascript`.
 
 ~~~ {%raw%}
 {% highlight ruby %}
@@ -21,119 +25,113 @@ Có các ngôn ngữ : `ruby`, `python`, `c`, `matlab`, `latex`, `html`, `css`, 
 {% endhighlight %}
 {% endraw %} ~~~
 
-Python với **đánh số dòng**:
+For example, **Python** with **line numbering**,
+
 ~~~ {%raw%}
 {% highlight python linenos %}
 
 {% endhighlight %}
 {% endraw %} ~~~
 
-### Chèn code liquid
 
-- Nếu muốn thêm tag `{{"{% this "}}%}` thì ghi `{% raw %}{{"{% this "}}%}{% endraw %}`.
-- Còn nếu muốn thêm `{{"{{ this "}}}}` thì ghi `{% raw %}{{"{{ this "}}}}{% endraw %}`.
+### Insert liquid code
 
-Quan trọng là mở đầu bằng `{% raw %}{{"{% endraw %}` trước từ khóa và kết thúc bằng `{% raw %}"}}{% endraw %}` trước kết thúc từ khóa.
+- If you wanna add tag `{{"{% this "}}%}`, use `{% raw %}{{"{% this "}}%}{% endraw %}`.
+- If you like this `{{"{{ this "}}}}`, use `{% raw %}{{"{{ this "}}}}{% endraw %}`.
+- **The rule**: use `{% raw %}{{"{% endraw %}` before the key-word and end with `{% raw %}"}}{% endraw %}` before the end of key-word.
+- **An easier way**: use `{{ "{% raw " }}%}` and `{{ "{% endraw " }}%}` around the key-word. These two commands are also used for a block of codes, 
 
-Hoặc một cách khác dễ hơn, đó là dùng `{{ "{% raw " }}%}` và `{{ "{% endraw " }}%}` bao quanh từ khóa cần hiện. Hai từ này còn có thể dùng để hiện một đoạn code nếu được đặt trước đó.
+	~~~
+	~~~ {{ "{% raw " }}%}{% raw %}{% for %}
+	// các dòng codes
+	{% end for %}{% endraw %}{{ "{% endraw " }}%} ~~~
+	~~~
 
-~~~
-~~~ {{ "{% raw " }}%}{% raw %}{% for %}
-// các dòng codes
-{% end for %}{% endraw %}{{ "{% endraw " }}%} ~~~
-~~~
+	**Tips**: For a beautiful display, put `{{ "{% raw " }}%}` and `{{ "{% endraw " }}%}` exactly like the above code.
 
-Lưu ý, để cho khung code đẹp, bạn nên đặt `{{ "{% raw " }}%}` và `{{ "{% endraw " }}%}` giống như đoạn code mẫu trên.
 
-## Chèn hình
 
-### Chèn bình thường
+## Insert figure
+
+### Insert in a normal way
 
 ~~~ {% raw %}
-![](/images/posts/toan-so-cap/){:.w-500 .no-border}
+![](/link/to/figure/){:.w-500 .no-border}
 {% endraw %} ~~~
 
 <div class="thi-colums" markdown="1">
-- `no-border`: bỏ đi khung bao quanh hình
-- `w-300`: giảm kích thước hình về tối đa `300px` (với màn hình có chiều ngang tối đa `500px` thì sẽ chuyển về `100%` kích thước màn hình). Có thể thay số `3` trong `300` bởi `2,4,5,6,7,8,10` hoặc `w-150`.
+- `no-border`: remove the border around figure
+- `w-300`: reduce the size of image to maximum `300px` (if the screen's maximum size is `500px`, the figure's size will be `100%` the size of the screen). You can change the number `3` in `300` by other numbers `2,4,5,6,7,8,10` or something like `w-150`.
 </div>
 
-### Chèn hình inline
+### Insert an inline figure
 
 ~~~ {% raw %}
-{% include img-inline.html content="đường/dẫn/đến/hình" %}
+{% include img-inline.html content="/link/to/figure/" %}
 {% endraw %} ~~~
 
-## Chèn video
+## Insert an video from Youtube
 
-Để chèn video từ youtube, bạn tìm trong đường link của video, ví dụ
+Determine the youtube video's url, like this
 
 ~~~
 https://www.youtube.com/watch?v=wIsK4kQTrIg
 ~~~
 
-bạn chọn `wIsK4kQTrIg` để thêm vào nội dung của đoạn code sau
+Choose `wIsK4kQTrIg` and put it inside below code
 
 ~~~ {% raw %}
 {% include youtube.html content="wIsK4kQTrIg" %}
 {% endraw %} ~~~
 
-## Tags
+## For writing posts
 
-Front matter
+### Remove heading numbering
 
-~~~ 
-tags: [thu nghiem, analsys, theorem]
-~~~
-
-## Soạn thảo
-
-### Bỏ đánh số một heading
-
-Nếu bạn muốn bỏ đánh số một headings nào đó, bạn chỉ việc thêm vào NGAY TRƯỚC heading ấy `{.nocount}`, ví dụ
+If you don't want display number before some heading, just put BEFORE this heading `{.nocount}`, for example,
 
 ~~~ {% raw %}
 {:.nocount}
-## Heading không có đánh số
+## Heading without numbering
 {% endraw %} ~~~
 
-Nếu bạn muốn dùng nhiều class thì các class cách nhau bởi khoảng trắng (space).
+If you wanna use multiple classes, separate them by space.
 
-### Gán một id cho heading
+### Manually assign an id for a heading
 
-Nếu bạn muốn gán một id cho heading nào đó mà không muốn nó tự động được tạo thì bạn thêm `{#id-cua-ban}` vào NGAY TRƯỚC heading đó, ví dụ
+Indert `{:#your-id}` before this heading, for instance,
 
 ~~~ {% raw %}
-{:#id-cua-ban}
-## Thêm heading
+{:#your-id}
+## Heading
 {% endraw %} ~~~
 
-Đến khi bạn muốn gọi lại nó thì dùng
+If you wanna use it,
 
 ~~~ {% raw %}
-[Caption]({{ page.url }}#id-cua-ban)
+[Caption]({{ post.url }}#your-id)
 {% endraw %} ~~~
 
-### Thêm mục lục
+### Insert toc (table of contents)
 
-Thêm dòng code sau vào **đoạn thứ hai** trong văn bản.
+Insert this line
 
 ~~~ {% raw %}
 {% include toc.html %}
 {% endraw %} ~~~
 
-### Thêm headings nhưng không hiện nó ra, chỉ hiện ở toc
+### Insert heading only on toc (not display it on the post)
 
-Để ẩn một cái gì đó, dùng class `notdisplay`. Nếu muốn ẩn heading nào đó thì dùng
+Use the class `notdisplay`,
 
 ~~~ {% raw %}
 {:.notdisplay}
-# heading ẩn
+# Hidden deading
 {% endraw %} ~~~
 
-### Chia cột cho danh sách
+### Make columns for a list
 
-Đặt danh sách trong thẻ `<div>` như sau
+Put the list inside a `<div>` tag like,
 
 {% highlight html %}
 <div class="thi-columns" markdown="1">
@@ -146,7 +144,7 @@ Thêm dòng code sau vào **đoạn thứ hai** trong văn bản.
 </div>
 {% endhighlight %}
 
-Kết quả
+Results,
 
 <div class="thi-columns" markdown="1">
 - item 1
@@ -157,254 +155,267 @@ Kết quả
 - item 6
 </div>
 
-### Chia cột (code va kết quả)
+### Make side-by-side code and result
 
 {% highlight html %}
 <div class="row" markdown="1">
-<div class="col m12 l5" markdown="1">
+<div class="col m12 mr-l-1 l5" markdown="1">
 ~~~
-this is the code
+This is the code
 ~~~
 </div>
-<div class="col m12 l7" markdown="1">
+<div class="col m12 ml-l-1 l6" markdown="1">
 ~~~
-this is the result
+This is the result
 ~~~
 </div>
 </div>
 {% endhighlight %}
 
-Kết quả
+gives
 
 <div class="row" markdown="1">
-<div class="col m12 l5" markdown="1">
+<div class="col m12 mr-l-1 l5" markdown="1">
 ~~~
-this is the code
-~~~
-</div>
-<div class="col m12 l7" markdown="1">
-~~~
-this is the result
+This is the code
 ~~~
 </div>
+<div class="col m12 ml-l-1 l6" markdown="1">
+~~~
+This is the result
+~~~
+</div>
 </div>
 
-Bạn có thể thay đổi giá trị của `5` và `7` tùy theo chênh lệch độ rộng của 2 cột (sao cho tổng là 12 là được). Xem thêm về grid của theme materialize [tại đây](http://next.materializecss.com/grid.html).
+You can change the value of `5` and `6` by other numbers depending on the ratio between their size (their sum must be equal to `11`). Read more on the [grid of materialize](http://next.materializecss.com/grid).
 
-### Chèn thêm link đọc thêm
 
-Bạn có thể chèn thêm link đọc thêm dạng
+### Insert a read-more link
 
-{% include more.html content="[Mời bạn ghé thăm Math2IT](http://math2it.com)." %}
-
-Bạn soạn
+<div class="row" markdown="1">
+<div class="col m12 mr-l-1 l5" markdown="1">
 
 ~~~ {% raw %}
-{% include more.html content="[Mời bạn ghé thăm Math2IT](http://math2it.com)." %}
+{% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
 {% endraw %} ~~~
 
+</div>
+<div class="col m12 ml-l-1 l6" markdown="1">
 
-### Chèn các bước (steps)
+{% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
 
-Nếu bạn muốn viết bài hướng dẫn với các "steps" như ví dụ dưới đây
+</div>
+</div>
+
+
+### Insert steps
+
+If you want something like this,
 
 <div class="thi-step">
 <div class="step" markdown="1">
-Nội dung trong bước 1.
+Contents in step 1.
 </div>
 <div class="step" markdown="1">
-Nội dung trong bước 2
+Contents in step 2.
 </div>
 </div>
 
-Thì bạn có thể dùng đoạn code sau
+Use below codes,
 
 {% highlight html %}
 <div  class="thi-step">
 <div class="step" markdown="1">
-Nội dung trong bước 1.
+Contents in step 1.
 </div>
 <div class="step" markdown="1">
-Nội dung trong bước 2
+Contents in step 2.
 </div>
 </div>
 {% endhighlight %}
 
-Lưu ý, nếu bạn tạo một trang mới không phải là một post bình thường, bạn cần phải để dòng code sau ở YAML đầu trang.
 
-{% highlight html %}
-css: "step.css"
-{% endhighlight %}
+## Mathematical expressions
 
+- Inline math, use `$math-expression$`
+- Block of math, use `$$math block$$` or 
 
-### CSS câu hỏi
+	~~~ latex
+	$$
+	cong-thuc-toan
+	$$
+	~~~
 
-Để có thể hiện câu hỏi dạng như sau
+- If you wanna insert some special characters, you must put `\` before this character, for instance, `\\{ 1,2,3 \\}` gives $\\{ 1m2,3 \\}$
+- If you type inline maths which contain chatacters `_`, you must add `\` before each of them, for example, `a\_1` give $a\_1$.
+- Don't use `||` for absolute values, let's use `\vert \vert` instead.
+- Don't use `\left\| \right\|` for norms, use `\Vert \Vert` instead.
+- Don't use `*` for star symbols, use `\ast` instead.
+- If you wanna type `\\`, type `\\\\` instead.
+- If you wanna type an inline matrix, e.g., $[A]=\begin{bmatrix}1 & 2 \\\\ 2 & 3.999 \end{bmatrix}$, type like below,
 
-{% include question.html content="Nội dung câu hỏi?" %}
+	~~~ latex
+	$[A]=\begin{bmatrix}1 & 2 \\\\ 2 & 3.999 \end{bmatrix},$
+	~~~
 
-Bạn dùng
+- In order to use `\label{}` and `\eqref{}` like in latex, use
 
-~~~ {% raw %}
-{% include question.html content="Nội dung câu hỏi?" %}
-{% endraw %} ~~~
+	~~~ latex
+	$$
+	\begin{align}\tag{1}\label{eq1}
+	cong-thuc-toan
+	\end{align}
+	$$
+	
+	Call again equation $\eqref{eq1}$.
+	~~~
 
-## Soạn thảo toán học
+	which gives
 
-- Trong hàng thì dùng `$cong-thuc-toan$`
-- Ngoài hàng thì dùng `$$cong-thuc-toan$$`. Tuy nhiên bạn nên để `cong-thuc-toan` ở một hàng riêng, ví dụ
-{% highlight latex %}
-$$
-cong-thuc-toan
-$$
-{% endhighlight %}
-- Nếu muốn dùng các ký tự đặc biệt, phải để thêm dấu `\` trước nó, ví dụ tập hợp `\\{cac-phan-tu\\}`
-- Nếu gõ trong hàng mà có ký tự `_` thì phải thêm `\` trước nó, ví dụ `a\_1`
-- Đừng dùng `||` cho giá trị tuyệt đối, mà dùng `\vert \vert`
-- Đừng dùng `\left\| \right\|` cho chuẩn, hãy dùng `\Vert \Vert`
-- Đừng dùng `*` mà hãy dùng `\ast`
-- Gõ `\\` thì dùng `\\\\`
+	$$
+	\begin{align}\tag{1}\label{eq1}
+	cong-thuc-toan
+	\end{align}
+	$$
 
-Riêng việc gõ ma trận trong hàng, ví dụ như $[A]=\begin{bmatrix}1 & 2 \\\\ 2 & 3.999 \end{bmatrix},$ thì ta gõ như sau
+	Call again equation $\eqref{eq1}$.
 
-~~~
-$[A]=\begin{bmatrix}1 & 2 \\\\ 2 & 3.999 \end{bmatrix},$
-~~~
+- You don't need an enviroment `align` or `equation` to use `\label`, you can use it with `$$` only, for example,
 
----
-
-Để có thể `\label` và `\ref` lại công thức toán giống trong LaTeX, bạn gõ như sau
-
-{% highlight latex %}
-$$
-\begin{align}\tag{1}\label{eq1}
-cong-thuc-toan
-\end{align}
-$$
-Gọi lại công thức $\eqref{eq1}$.
-{% endhighlight %}
-
-Kết quả giống như sau
-
-$$
-\begin{align}\tag{1}\label{eq1}
-cong-thuc-toan
-\end{align}
-$$
-Gọi lại công thức $\eqref{eq1}$.
-
-Lưu ý, bạn không cần phải dùng môi trường `align` để có thể sử dụng `label`, bạn dùng như sau vẫn được
-
-{% highlight latex %}
-$$
-cong-thuc-toan \tag{1}\label{eq1}
-$$
-Gọi lại công thức $\eqref{eq1}$.
-{% endhighlight %}
+	~~~ latex
+	$$
+	cong-thuc-toan \tag{1}\label{eq1}
+	$$
+	
+	Call again equation $\eqref{eq1}$.
+	~~~
 
 
-## Các loại khung
+## Boxes
 
-### Thêm box định nghịa, định lý
+### Theorem boxes
 
-Bạn dùng đoạn code sau đây
+<div class="row" markdown="1">
+<div class="col m11 l5 mr-l-1" markdown="1">
+
+Use these lines of code
 
 {% highlight html %}
 <div class="thi-box" markdown="1">
 <div class="box-title" markdown="1">
-**Tựa đề**
+**Title**
 </div>
 <div class="box-content" markdown="1">
-Nội dung văn bản
+Content
 </div>
 </div>
 {% endhighlight %}
 
-Sẽ cho ra kết quả
+</div>
+<div class="col m11 l6 ml-l-1" markdown="1">
+
+which give
 
 <div class="thi-box" markdown="1">
 <div class="box-title" markdown="1">
-**Tựa đề**
+**Title**
 </div>
 <div class="box-content" markdown="1">
-Nội dung văn bản
+Content
 </div>
 </div>
 
-Lưu ý, nếu có gõ công thức toán học `$$cong-thuc$$` riêng dùng thì nên để 1 hàng trước trước `</div>` gần cuối.
+</div>
+</div>
 
-### Thêm các khung thông báo
 
-Để có thể thêm khung cảnh báo như
+### Notification boxes
 
-{% include warning.html content="Nội dung cảnh báo!" %}
+<div class="row" markdown="1">
+<div class="col m11 l7 mr-l-1" markdown="1">
 
-Bạn dùng đoạn code
-
-~~~ {% raw %}
-{% include warning.html content="Nội dung cảnh báo!" %}
-{% endraw %} ~~~
-
-Để có thể thêm khung gợi ý (tip)
-
-{% include tip.html content="Nội dung gợi ý." %}
-
-Bạn dùng
+Use these lines of code
 
 ~~~ {% raw %}
-{% include tip.html content="Nội dung gợi ý." %}
+{% include warning.html content="Warning's content" %}
 {% endraw %} ~~~
 
-### Chèn khung hide/show
+</div>
+<div class="col m11 l4 ml-l-1" markdown="1">
 
-Vì tạm thời chưa biết cách include một đoạn dài văn bản, bạn dùng cấu trúc dài sau
+which give
+
+{% include warning.html content="Warning's content" %}
+
+</div>
+</div>
+
+<div class="row" markdown="1">
+<div class="col m11 l7 mr-l-1" markdown="1">
+
+Use these lines of code
+
+~~~ {% raw %}
+{% include tip.html content="Info's content" %}
+{% endraw %} ~~~
+
+</div>
+<div class="col m11 l4 ml-l-1" markdown="1">
+
+which give
+
+{% include tip.html content="Info's content" %}
+
+</div>
+</div>
+
+
+
+### Insert hide/show box
+
+<div class="row" markdown="1">
+<div class="col m11 l6 mr-l-1" markdown="1">
+
+Use these lines of code
+
+~~~ html
+<ul class="collapsible" data-collapsible="accordion">
+<li>
+<div class="collapsible-header" markdown="1"><i class="material-icons">face</i>
+Title
+</div>
+<div class="collapsible-body" markdown="1">
+Content
+</div>
+</li>
+</ul>
+~~~
+
+</div>
+<div class="col m11 l5 ml-l-1" markdown="1">
+
+which give
 
 <ul class="collapsible" data-collapsible="accordion">
 <li>
 <div class="collapsible-header" markdown="1"><i class="material-icons">face</i>
-Tựa đề
+Title
 </div>
 <div class="collapsible-body" markdown="1">
-Nội dung
+Content
 </div>
 </li>
 </ul>
 
-{% highlight html %}
-<ul class="collapsible" data-collapsible="accordion">
-<li>
-<div class="collapsible-header" markdown="1"><i class="material-icons">face</i>
-Tựa đề
 </div>
-<div class="collapsible-body" markdown="1">
-Nội dung
 </div>
-</li>
-</ul>
-{% endhighlight %}
 
-Để có thể chèn thêm list vào trong cái collapse này, bạn soạn như sau
 
-{% highlight html %}
-<ul class="collapsible" data-collapsible="accordion">
-<li>
-<div class="collapsible-header" markdown="1"><i class="material-icons">face</i>
-Tựa đề
-</div>
-<div class="collapsible-body" markdown="1">
-Văn bản thường
-<p markdown="1">
-- item 1 <br />
-- item 2 <br />
+### Insert blockquote
+
+<p class="post-more-info" markdown="1">
+Nội dung của thông tin thêm.
 </p>
-</div>
-</li>
-</ul>
-{% endhighlight %}
-
-### Khung thông tin đọc thêm cho bài
-
-Nếu bạn muốn thêm thông tin đọc thêm cho bài viết (một ô vuông nhỏ nằm chệch hẳn về bên phải của bài đăng), bạn thêm đoạn code sau đây vào SAU đoạn mà bạn muốn thêm đọc thêm.
 
 {% highlight html %}
 <p class="post-more-info" markdown="1">
@@ -412,61 +423,61 @@ Nội dung của thông tin thêm.
 </p>
 {% endhighlight %}
 
-Lưu ý, nếu bạn tạo một trang mới không phải là một post bình thường, bạn cần phải để dòng code sau ở YAML đầu trang.
 
-{% highlight html %}
-css: "step.css"
-{% endhighlight %}
+### Insert resume of the post
 
-### Khung tóm tắt nội dung
+<div class="row" markdown="1">
+<div class="col m11 l6 mr-l-1" markdown="1">
 
-<fieldset class="field-set">
-<legend class="leg-title">Tựa đề</legend>
-Nội dung
-</fieldset>
+Use these lines of code
 
 {% highlight html %}{%raw%}
 {:.tomtat}
 ### Tóm tắt phần học
 
 <fieldset class="field-set" markdown="1">
-<legend class="leg-title">Tựa đề</legend>
-Nội dung
+<legend class="leg-title">Title</legend>
+Content
 </fieldset>
 {%endraw%}{% endhighlight %}
 
+</div>
+<div class="col m11 l5 ml-l-1" markdown="1">
+
+which give
+
+<fieldset class="field-set">
+<legend class="leg-title">Title</legend>
+Content
+</fieldset>
+
+</div>
+</div>
+
 
 {:#cat-tag}
-## Categories và tags
+## Categories and tags
 
-### Tạo một category mới
+### Use it
 
-1. Category dùng để hiển thị chủ đề bài viết ở trang chủ (ở góc dưới trái mỗi bài đăng). Nó cũng hiển thị trong mục [Lưu trữ](/categories)
-2. Thêm vào `_data\categories.yml`
-3. Màu sắc theo quy luật sau
-	- **Toán**: `lightcyan` (color), `darkcyan` (txt)
-	- **Tin**: `lightyellow` (color), `darkgoldenrod` (txt)
-	- **Khám phá**: `"#f0ffdf"` (color), `darkolivegreen` (txt)
-	- **Không phân loại**: `"#eceff1"` (color), `darkslategrey` (txt)
-4. Thêm file vào `category\`
-	- Chỉ thêm file nào khác với `tag` bên dưới!!!
-	- Bắt chước cấu trúc các file đang có
-	- Tên giống như phần `slug` của file `categories.yml`.
-	- Nội dung của file đó có phần `slug` giống tên file.
+On the front matter of each post, use this
 
-### Tạo một tag mới
+~~~
+categories: [maths, python] 
+tags: [algebra, function, theorem]
+~~~
 
-1. Thêm vào `_data\tags.yml` theo quy luật
-	- (1) `the`: tên của tag ở trong mỗi bài viết vẫn ghi, ví dụ `"thiết kế web"`.
-	- (2) `slug`: cái dùng để tạo đường dẫn cho tag đó (`/tag/web-design`), ví dụ `web-design`.
-	- (3) `name`: tên để hiển thị ở [Chủ đề](/projects)
-2. Tạo một file `.html` tương ứng trong thư mục `\tag` với tên được đặt giống như cái (2). Nội dung của nó đảm bảo 
-	- `title`: giống (3), có thể sửa khác.
-	- `slug`: giống (1)
+### Create a new category
 
-### Đang dùng
+1. Below the title of each post, you will see "in <category>", for example, this post **in NoteTheme**.
+2. Open file `_data\categories.yml` and add the new category you want
+	- `slug`: the id of this category, it will appear in the url, like `https://dinhanhthi.github.io/NoteTheme/categories#notetheme`
+	- `name` : the name of this catefory, it will appear on the site, like `NoteTheme`
 
-Các categories có sẵn
+### Already-defined tags / categories
+
+Already-defined categories:
+
 <div class="thi-columns">
 <ul>
 {% for cat in site.data.categories %}
@@ -475,22 +486,8 @@ Các categories có sẵn
 </ul>
 </div>
 
-Các [tags](/tags) có trong mục [Chủ đề](/projects)
-
 <p>
-{% for dtag in site.data.tags %}
-<code class="highlighter-rouge">{{ dtag.the }}</code>
-{% if forloop.last == false %}
-, 
-{% else %}
-.
-{% endif %}
-{% endfor %}
-</p>
-
-Các [tags](/tags) đang dùng
-
-<p>
+Already-defined tags: 
 {% for tag in site.tags %}
 <code class="highlighter-rouge">{{ tag[0] }}</code>
 {% if forloop.last == false %}
