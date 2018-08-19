@@ -1,6 +1,6 @@
 title: NoteTheme
 description: You cannot remember everything.
-baseurl: "NoteTheme"
+baseurl: "/NoteTheme"
 url: "http://dinhanhthi.com"
 permalink: /:title
 repository: dinhanhthi/NoteTheme
