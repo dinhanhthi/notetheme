@@ -8,8 +8,8 @@
   <li>
     <div class="userView thi-userView">
       <div class="background"></div>
-        <a href="https://github.com/{{site.user.github}}">
-          <img style="display:inherit;" class="circle z-depth-2" src="{{site.baseurl}}/assets/res/user.png">
+        <a href="{{ site.baseurl }}/">
+          <img style="display:inherit;" class="circle z-depth-2" src="{{ site.baseurl }}/assets/res/user.png">
         </a>
       <span style="font-size: larger;" class="white-text name">{{site.user.name}}</span>
       <span class="white-text email"><a style="color: #bdbdbd;" href="{{ site.user.website | prepend: 'http://' }}">{{ site.user.website }}</a></span>
@@ -22,11 +22,11 @@
     </form>
   </li>
   <div id="nav-bar">
-    <li><a class="waves-effect" href="{{site.baseurl}}/"><i class="material-icons">home</i>Home</a></li>
-    <li><a class="waves-effect" href="{{site.baseurl}}/categories"><i class="material-icons">sort</i>Categories</a></li>
-    <li><a class="waves-effect" href="{{site.baseurl}}/tags"><i class="material-icons">loyalty</i>Tags</a></li>
+    <li><a class="waves-effect" href="{{ site.baseurl }}/"><i class="material-icons">home</i>Home</a></li>
+    <li><a class="waves-effect" href="{{ site.baseurl }}/categories"><i class="material-icons">sort</i>Categories</a></li>
+    <li><a class="waves-effect" href="{{ site.baseurl }}/tags"><i class="material-icons">loyalty</i>Tags</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="waves-effect" href="{{site.baseurl}}/about"><i class="material-icons">info</i>About</a></li>
-    <li><a class="waves-effect" href="{{site.baseurl}}/contact"><i class="material-icons">perm_contact_calendar</i>Contact</a></li>
+    <li><a class="waves-effect" href="{{ site.baseurl }}/about"><i class="material-icons">info</i>About</a></li>
+    <li><a class="waves-effect" href="{{ site.baseurl }}/contact"><i class="material-icons">perm_contact_calendar</i>Contact</a></li>
   </div>
 </ul>
