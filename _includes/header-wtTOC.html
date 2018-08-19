@@ -8,25 +8,25 @@
   <li>
     <div class="userView thi-userView">
       <div class="background"></div>
-        <a href="{{site.github_profile}}">
+        <a href="https://github.com/{{site.user.github}}">
           <img style="display:inherit;" class="circle z-depth-2" src="{{site.baseurl}}/assets/res/user.png">
         </a>
-      <span style="font-size: larger;" class="white-text name">{{site.user}}</span>
-      <span class="white-text email"><a style="color: #bdbdbd;" href="https://dinhanhthi.com">dinhanhthi.com</a></span>
+      <span style="font-size: larger;" class="white-text name">{{site.user.name}}</span>
+      <span class="white-text email"><a style="color: #bdbdbd;" href="{{ site.user.website }}">{{ site.user.website | prepend: "http://" }}</a></span>
     </div>
   </li>
   <li style="padding: 10px;">
     <form action="{{ site.baseurl }}/search" method="get">
-      <input class="search-sidebar" type="search" name="q" {% if include.add_id %}id="search-input"{% endif %} placeholder="tìm gì đó?" autofocus>
+      <input class="search-sidebar" type="search" name="q" {% if include.add_id %}id="search-input"{% endif %} placeholder="Search something?" autofocus>
       <input type="submit" value="Search" style="display: none;">
     </form>
   </li>
   <div id="nav-bar">
-    <li><a class="waves-effect" href="{{site.baseurl}}/"><i class="material-icons">home</i>Trang chủ</a></li>
-    <li><a class="waves-effect" href="{{site.baseurl}}/categories"><i class="material-icons">sort</i>Theo mục</a></li>
-    <li><a class="waves-effect" href="{{site.baseurl}}/tags"><i class="material-icons">loyalty</i>Thẻ</a></li>
+    <li><a class="waves-effect" href="{{site.baseurl}}/"><i class="material-icons">home</i>Home</a></li>
+    <li><a class="waves-effect" href="{{site.baseurl}}/categories"><i class="material-icons">sort</i>Categories</a></li>
+    <li><a class="waves-effect" href="{{site.baseurl}}/tags"><i class="material-icons">loyalty</i>Tags</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="waves-effect" href="{{site.baseurl}}/about"><i class="material-icons">info</i>Giới thiệu</a></li>
-    <li><a class="waves-effect" href="{{site.baseurl}}/contact"><i class="material-icons">perm_contact_calendar</i>Liên hệ</a></li>
+    <li><a class="waves-effect" href="{{site.baseurl}}/about"><i class="material-icons">info</i>About</a></li>
+    <li><a class="waves-effect" href="{{site.baseurl}}/contact"><i class="material-icons">perm_contact_calendar</i>Contact</a></li>
   </div>
 </ul>
