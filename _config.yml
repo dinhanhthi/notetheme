@@ -1,7 +1,7 @@
 title: NoteTheme
 description: You cannot remember everything.
 baseurl: "/NoteTheme"
-url: "http://dinhanhthi.com"
+url: ""
 permalink: /:title
 repository: dinhanhthi/NoteTheme
 paginate: 28
