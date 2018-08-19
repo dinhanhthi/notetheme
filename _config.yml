@@ -2,7 +2,6 @@ title: NoteTheme
 description: You cannot remember everything.
 baseurl: "/NoteTheme"
 url: ""
-permalink: /:title
 repository: dinhanhthi/NoteTheme
 paginate: 28
 
@@ -22,6 +21,9 @@ disqus_shortname: this-site
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
+permalink: /NoteTheme/:title
+
 
 gems:
   - jekyll-feed
