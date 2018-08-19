@@ -16,9 +16,9 @@ js: ["post.js"]
     <div id="post-info">
       <h3>{{page.title}}</h3>
       <span>
-        Đăng lúc
+        Posted on
         <span style="display: initial;" class="cat-class">{{page.date | date: "%d/%m/%Y"}}</span>,
-        trong chuyên mục
+        in
         {% for cat in page.categories %}
         {% for catDat in site.data.categories %}
           {% if catDat.slug == cat %}
@@ -50,5 +50,9 @@ js: ["post.js"]
     </div>
     {% include related-posts.html %}
     {% include search_form.html %}
+
+    {% if site.disqus_shortname and page.comment %}
+      {% include disqus.html %}
+    {% endif %}
   </div>
 </main>

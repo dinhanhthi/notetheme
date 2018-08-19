@@ -1,10 +1,2 @@
-- slug: maths
-  name: Toán
-- slug: phd
-  name: PhD
-- slug: it
-  name: CNTT
-- slug: french
-  name: French
-- slug: articles
-  name: Bài viết hay
+- slug: notetheme
+  name: NoteTheme

@@ -1,5 +1,51 @@
 ---
 ---
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
+  color: lightslategrey;
+  &:hover{
+    color: darkslategray;
+  }
+}
+
+.cards-container .card{
+	border-top: 0.5px #ddd solid;
+}
+
+body {
+  counter-reset: h2counter;
+}
+
+.notdisplay{
+display: none;
+}
+
+h1{
+	font-size: 2.6rem;
+	font-weight: 500;
+}
+
+h2{
+	font-size: 2.3rem;
+	font-weight: 500;
+	margin: 1.2rem 0 1rem 0;
+}
+
+h3{
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin: 1rem 0 1rem 0;
+}
+
+h4{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+p{
+	margin: 0.5rem 0;
+}
+
 .thi-post{
   color: black;
   h1 {
@@ -43,6 +89,72 @@
     content: none;
       counter-increment: none;
   }
+  h4{
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: darkgreen;
+  }
+
+  p{
+    &>img{
+      max-width: 100%;
+      display: block;
+      text-align: center;
+      box-shadow: 0px 0 5px 0;
+      margin: auto;
+    }
+    &:first-child{
+      margin-top: 2rem;
+    }
+  }
+  img+em{
+    margin-top: 5px;
+    text-align: center;
+    display: block;
+  }
+}
+
+// images
+li>img{
+	max-width: 100%;
+	display: block;
+	text-align: center;
+	box-shadow: 0px 0 5px 0;
+	margin: 10px auto;
+}
+.container p>img{
+	max-width: 100%;
+	display: block;
+	text-align: center;
+	box-shadow: 0px 0 5px 0;
+	margin: auto;
+}
+@media only screen and (min-width: 770px){
+	.float-left{
+		float: left;
+		margin: 10px 20px 10px 0!important;
+	}
+	.float-right{
+		float: right;
+		margin: 10px 0 10px 20px!important;
+	}
+}
+
+@media only screen and (min-width: 500px){
+	.w-150{max-width: 150px!important;}
+	.w-200{max-width: 200px!important;}
+	.w-300{max-width: 300px!important;}
+	.w-400{max-width: 400px!important;}
+	.w-500{max-width: 500px!important;}
+	.w-600{max-width: 600px!important;}
+	.w-700{max-width: 700px!important;}
+	.w-800{max-width: 800px!important;}
+	.w-900{max-width: 900px!important;}
+	.w-1000{max-width: 1000px!important;}
+}
+
+.no-border{
+	box-shadow: none!important;
 }
 
 .row .col{
@@ -70,4 +182,313 @@ hr{
 .chip{
   margin-bottom: 10px;
   background-color: #eee;
+}
+
+.page-info h2{
+	color: coral;
+}
+
+#page-info{
+  h2{
+    color: coral;
+    &:before{
+      border-left: 4px solid;
+      padding-left: 14px;
+    }
+  }
+  span{
+    font-size: 80%;
+  }
+}
+
+#post-info{
+  span{
+    font-size: 80%;
+    @media only screen and (max-width: 992px){
+      text-align: center;
+    }
+  }
+  h3{
+    color: coral;
+    font-size: 2rem;
+    font-weight: 500!important;
+  }
+} 
+
+#post-title{
+	font-weight: 500!important;
+}
+
+// header
+.userView{
+	text-align: center;
+}
+
+.thi-userView{
+	line-height: 0;
+}
+
+// footer
+.footer-copyright .container{
+	color: white;
+	text-align: center;
+	&a {
+		color: white;
+	}
+}
+.page-footer{
+	padding-top: 0;
+}
+
+.footnote{
+	opacity: initial;
+	font-weight: 500;
+  font-size: larger;
+  &:before{
+    content: "[";
+  }
+  &:after{
+    content: "]";
+  }
+
+}
+
+p ~ ul, p ~ ol{
+	margin-top: -5px;
+}
+
+nav ul a{
+	line-height: 80px;
+}
+
+/*summerize*/
+.tomtat{
+	margin: 10px!important;
+	font-size: 0px!important;
+}
+.leg-title{
+	background: #e8aa04;
+	color: white;
+	font-size: 120%;
+	padding: 4px 10px;
+	border-radius: 5px;
+	font-weight: 500;
+}
+
+.field-set{
+	border: #e8aa04 2px dashed;
+	background: lightyellow;
+	min-width: 0;
+	padding: 0px 20px;
+}
+
+// table
+td,th{
+	padding: 10px 5px;
+}
+table{
+	width: auto;
+}
+table, th, td{
+	border: 1px solid #ddd;
+}
+
+.container .row{
+	margin-left: inherit;
+	margin-right: inherit;
+}
+
+.thi-signature{
+	font-family: 'Dancing Script', cursive;
+	text-align: right;
+	font-size: 150%;
+}
+
+.side-nav li>a{
+	font-size: inherit;
+}
+
+.cat-class{
+	color: lightslategrey;
+	text-transform: capitalize!important;
+	font-weight: 500;
+}
+
+.cat-commas:after{
+	content: ",";
+}
+
+.cat-commas:last-child:after{
+	content: ".";
+}
+
+html{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 17px;
+}
+
+.font-title{
+	font-family: 'Dancing Script', cursive;
+	font-size: 50px!important;
+}
+
+.font-chuan{
+	font-size: 17px;
+}
+
+.font-inherit{
+	font-size: inherit;
+}
+
+.text-bold{
+	font-weight: bold;
+}
+
+a {
+  color: forestgreen;
+  &:hover{
+    text-decoration: none;
+    opacity: 0.8;
+  }
+}
+
+.text-white{
+  color: white;
+  a{
+    color: white;
+  }
+}
+
+
+.text-cap{
+	text-transform: capitalize!important;
+}
+
+.card-action a:hover{
+	color: chocolate;
+}
+
+// code
+
+main figure.highlight{
+	margin: 1em 0px!important;
+	padding: 0 10px;
+}
+
+figure.highlight{
+	max-height: 400px;
+	overflow: auto;
+}
+
+p + div.highlighter-rouge{
+	margin: -10px 0 1em 0!important;
+	overflow: auto;
+}
+
+.highlight{
+  border-radius: 5px;
+  .err{
+    background-color: initial!important;
+    background: none!important;
+  }
+}
+
+li code, p code{
+	background-color: #e7e9ee;
+	color: #dc0045;
+	padding: 1px 4px;
+	border-radius: 4px;
+	font-size: 95%;
+}
+
+pre{
+  code{
+    background-color: inherit;
+    color: inherit;
+    padding: initial;
+  }
+  &.highlight{
+    max-height: 400px;
+  }
+} 
+
+.highlighter-rouge pre{
+	padding: 8px 10px!important;
+	overflow: auto;
+}
+
+// column
+.thi-columns{
+  -webkit-columns: 350px 2; /* Chrome, Safari, Opera */
+  -moz-columns: 350px 2; /* Firefox */
+  columns: 350px 2;
+  ul{
+    margin-top: 0;
+    }
+}
+
+.collapsible{
+  padding-left: 0!important;
+  &> li{
+    list-style-type: none!important;
+  }
+}
+.collapsible-header{
+  font-weight: 500;
+  line-height: inherit!important;
+  min-height: 0!important;
+  padding: 0 0.5rem!important;
+  p{
+    margin: 10px 0!important;
+  }
+  i{
+    line-height: initial!important;
+    margin-right: 0.5rem!important;
+  }
+}
+.collapsible-body{
+	padding: 0 2rem!important;
+}
+
+// thi box
+.thi-box{
+	margin: 20px 0;
+  overflow: auto;
+  .box-title{
+    background-color: #2874cf;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px 5px 0 0;
+  }
+  .box-title p{
+    margin: 0;
+  }
+  .box-content{
+    border: 1px #ddd solid;
+    padding: 0 15px;
+  }
+}
+
+.cat-tag{
+	font-size: 130%;
+	color: darkslateblue;
+}
+
+.search-sidebar{
+	text-align: center;
+	margin: 0;
+}
+
+.mat-icon{
+	float: left;
+	line-height: initial;
+	margin-right: 10px;
+}
+
+#disqus_thread{
+	margin-top: 20px;
+}
+
+.MathJax{
+	font-weight: lighter;
 }
