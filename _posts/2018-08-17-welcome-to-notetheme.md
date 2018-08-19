@@ -1,10 +1,13 @@
 ---
-title: For editing this site
+title: Welcome to NoteTheme
 categories:
   - it
 maths: 1
 toc: 1
+comment: 1
 ---
+
+{% include toc.html %}
 
 ## Chèn code
 
