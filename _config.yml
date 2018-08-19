@@ -10,9 +10,9 @@ favicon: "/assets/res/favicon.png" # site's favicon (icon left side of your page
 
 # MatJek specific configurations
 user: 
-  name: "Dinh Anh Thi"
+  name: "Math2IT"
   email: "dinhanhthimail@gmail.com"
-  website: "dinhanhthi.com"
+  website: "math2it.com"
   avatar: "/assets/res/user.png"
   github: "dinhanhthi"
 google_tracking_id: ""
