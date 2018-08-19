@@ -22,7 +22,7 @@ disqus_shortname: this-site
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: /NoteTheme/:title
+permalink: /:title
 
 
 gems:
