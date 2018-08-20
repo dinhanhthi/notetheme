@@ -13,6 +13,10 @@
     {% endif %}
   </title>
 
+  {% if page.datacamp %}
+    <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
+  {% endif %}
+
   {% if page.maths %}
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});

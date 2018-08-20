@@ -5,6 +5,7 @@ tags: [notetheme, jekyll, theme]
 maths: 1
 toc: 1
 comment: 1
+datacamp: 1
 ---
 
 In this tutorial, I suppose that you have already [installed NoteTheme]({{ site.baseurl }}/how-to-install-notetheme), just follow the ones you need and don't forget to leave a comment below.
@@ -48,6 +49,77 @@ For example, **Python** with **line numbering**,
 	~~~
 
 	**Tips**: For a beautiful display, put `{{ "{% raw " }}%}` and `{{ "{% endraw " }}%}` exactly like the above code.
+
+
+## Insert DataCamp R/Python code environment
+
+- In sert in **Front matter** of the post you wanna insert DataCamp Light: `datacamp: 1`
+- [Read more about datacamp light](https://github.com/datacamp/datacamp-light)
+- **Example**
+
+	<div data-datacamp-exercise data-lang="r">
+		<code data-type="pre-exercise-code">
+			# This will get executed each time the exercise gets initialized
+			b = 6
+		</code>
+		<code data-type="sample-code">
+			# Create a variable a, equal to 5
+			# Print out a
+		</code>
+		<code data-type="solution">
+			# Create a variable a, equal to 5
+			a <- 5
+	
+			# Print out a
+			print(a)
+		</code>
+		<code data-type="sct">
+			test_object("a")
+			test_function("print")
+			success_msg("Great job!")
+		</code>
+		<div data-type="hint">Use the assignment operator (<code><-</code>) to create the variable <code>a</code>.</div>
+	</div>
+
+- **Block of codes**
+
+	~~~ html
+	<div data-datacamp-exercise data-lang="r">
+
+		<code data-type="pre-exercise-code">
+			# This will get executed each time the exercise gets initialized
+			b = 6
+		</code>
+
+		<code data-type="sample-code">
+			# Create a variable a, equal to 5
+			# Print out a
+		</code>
+
+		<code data-type="solution">
+			# Create a variable a, equal to 5
+			a <- 5
+			# Print out a
+			print(a)
+		</code>
+
+		<code data-type="sct">
+			test_object("a")
+			test_function("print")
+			success_msg("Great job!")
+		</code>
+
+		<div data-type="hint">Use the assignment operator (<code><-</code>) to create the variable <code>a</code>.</div>
+
+	</div>
+	~~~
+
+- **Explanation**
+	- `data-lang="r"`: language to choose, `r` or `python`
+	- `pre-exercise-code`: load before executing.
+	- `sample-code`: These will appear in the text editor (left side)
+	- `solution`: The solution of the exercise
+	- `sct`: Check and give the results, see more for [R](https://github.com/datacamp/testwhat) and [python](https://github.com/datacamp/pythonwhat).
 
 
 
@@ -193,14 +265,14 @@ You can change the value of `5` and `6` by other numbers depending on the ratio 
 ### Insert a read-more link
 
 <div class="row" markdown="1">
-<div class="col s12 mr-l-1 l5" markdown="1">
+<div class="col s12 mr-l-1 l6" markdown="1">
 
 ~~~ {% raw %}
 {% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
 {% endraw %} ~~~
 
 </div>
-<div class="col s12 ml-l-1 l6" markdown="1">
+<div class="col s12 ml-l-1 l5" markdown="1">
 
 {% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
 
@@ -246,7 +318,7 @@ Contents in step 2.
 
 	~~~ latex
 	$$
-	cong-thuc-toan
+	x^n + y^n = z^n
 	$$
 	~~~
 
@@ -267,7 +339,7 @@ Contents in step 2.
 	~~~ latex
 	$$
 	\begin{align}\tag{1}\label{eq1}
-	cong-thuc-toan
+	x^n + y^n = z^n
 	\end{align}
 	$$
 	
@@ -278,7 +350,7 @@ Contents in step 2.
 
 	$$
 	\begin{align}\tag{1}\label{eq1}
-	cong-thuc-toan
+	x^n + y^n = z^n
 	\end{align}
 	$$
 
@@ -288,7 +360,7 @@ Contents in step 2.
 
 	~~~ latex
 	$$
-	cong-thuc-toan \tag{1}\label{eq1}
+	x^n + y^n = z^n \tag{1}\label{eq1}
 	$$
 	
 	Call again equation $\eqref{eq1}$.
@@ -436,9 +508,6 @@ Nội dung của thông tin thêm.
 Use these lines of code
 
 {% highlight html %}{%raw%}
-{:.tomtat}
-### Tóm tắt phần học
-
 <fieldset class="field-set" markdown="1">
 <legend class="leg-title">Title</legend>
 Content
@@ -450,7 +519,7 @@ Content
 
 which give
 
-<fieldset class="field-set">
+<fieldset class="field-set" markdown="1">
 <legend class="leg-title">Title</legend>
 Content
 </fieldset>
