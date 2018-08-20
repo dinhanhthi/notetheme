@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Posts by categories
-css: ["categories.css","page.css"]
+css: ["page.css"]
 ---
 
 <div style="margin-bottom: 1rem;">
@@ -9,7 +9,7 @@ css: ["categories.css","page.css"]
 </div>
 
 <div class="col s12 cat-div">
-  <div class="cat-list">
+  <div class="tag-list">
     {% for cat in site.categories %}
     	{% for catDat in site.data.categories %}
 	      {% if catDat.slug == cat[0] %}
@@ -19,7 +19,7 @@ css: ["categories.css","page.css"]
 	    {% if catego %}
 		    {% capture test %}{{cat[0] | slice: 0}}{% endcapture %}
 		    {% capture testup %}{{cat[0] | slice: 0 | upcase}}{% endcapture %}
-		    <a class="cat-chip" href="#{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{ catego.name }}</div></a>
+		    <a class="tag-chip" href="#{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{ catego.name }}</div></a>
 	    {% endif %}
     {% endfor %}
   </div>
@@ -37,7 +37,7 @@ css: ["categories.css","page.css"]
 		    <div class="tag-sec" id="{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}">
 					<h3 class="cat-tag" class="text-cap">{{ catego.name }}</h3>
 					<div class="thi-columns">
-							<ul class="cat-post">
+							<ul class="tag-post">
 								{% for post in cat[1] %}
 								<a class="post-title" href="{{site.baseurl}}{{post.url}}">
 									<li>

@@ -24,6 +24,7 @@ I have modified a lot from Matjek so that we have this theme for **the only purp
 - Support **tags and categories** for posts.
 - Mobile friendly
 - Search engine friendly
+- **Invisible** option : make your site invisible to search engines
 
 
 ## How to install

@@ -1,6 +1,6 @@
 ---
 layout: page
-css: ["index.css","idx-cols.css"]
+css: ["index.css"]
 ---
 
 <div class="row">
@@ -10,11 +10,13 @@ css: ["index.css","idx-cols.css"]
   </div>
 
   <div class="thi-columns">
-    <ul>
+    <ul class="tag-post">
     {% for post in paginator.posts %}
+      <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
         <li>
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> <small>{{post.date | date: "%d/%m/%Y"}}</small>
+          {{ post.title }} <small class="post-date">{{post.date | date: "%d/%m/%Y"}}</small>
         </li>
+      </a>
     {% endfor %}
     </ul>
   </div>
