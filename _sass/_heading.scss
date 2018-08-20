@@ -1,0 +1,90 @@
+h1{
+	font-size: 2.6rem;
+	font-weight: 500;
+}
+
+h2{
+	font-size: 2.3rem;
+	font-weight: 500;
+	margin: 1.2rem 0 1rem 0;
+}
+
+h3{
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin: 1rem 0 1rem 0;
+}
+
+h4{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.thi-post{
+    h1 {
+        counter-reset: h2counter;
+    }
+    h2{
+        counter-reset: h3counter;
+        font-size: 1.6rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #ccc;
+        color: #266ac1;
+        margin-top: 3rem;
+        overflow: hidden;
+        &:first-child{
+            margin-top: 1rem!important;
+        }
+        &:before {
+            content: counter(h2counter) ".\0000a0";
+            counter-increment: h2counter;
+        }
+        &+h3{
+            margin-top: 1rem;
+        }
+    }
+    h3{
+        font-size: 1.3rem;
+        color: #333;
+        margin-top: 2.2rem;
+    }
+
+    // numering
+    h3:before {
+        content: counter(h2counter) "." counter(h3counter) ".\0000a0";
+        counter-increment: h3counter;
+    }
+    h2.nocount:before {
+        content: none;
+        counter-increment: none;
+    }
+    h3.nocount:before {
+        content: none;
+        counter-increment: none;
+    }
+    h4{
+        font-size: 1.05rem;
+        font-weight: 500;
+        color: darkgreen;
+    }
+}
+
+.page-info h2{
+    color: coral;
+}
+#page-info h2{
+    color: coral;
+    text-align: center;
+    &:before{
+        border-left: 4px solid;
+        padding-left: 14px;
+    }
+}
+
+#post-info{
+    h3{
+        color: coral;
+        font-size: 2rem;
+        font-weight: 500!important;
+    }
+}

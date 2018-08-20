@@ -1,0 +1,23 @@
+.footer-copyright .container{
+	color: white;
+	text-align: center;
+	&a {
+		color: white;
+	}
+}
+.page-footer{
+	padding-top: 0;
+}
+
+.footnote{
+	opacity: initial;
+	font-weight: 500;
+  font-size: larger;
+  &:before{
+    content: "[";
+  }
+  &:after{
+    content: "]";
+  }
+
+}

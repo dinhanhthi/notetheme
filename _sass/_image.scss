@@ -1,0 +1,56 @@
+li>img{
+	max-width: 100%;
+	display: block;
+	text-align: center;
+	box-shadow: 0px 0 5px 0;
+	margin: 10px auto;
+}
+.container p>img{
+	max-width: 100%;
+	display: block;
+	text-align: center;
+	box-shadow: 0px 0 5px 0;
+	margin: auto;
+}
+@media only screen and (min-width: 770px){
+	.float-left{
+		float: left;
+		margin: 10px 20px 10px 0!important;
+	}
+	.float-right{
+		float: right;
+		margin: 10px 0 10px 20px!important;
+	}
+}
+
+@media only screen and (min-width: 500px){
+	.w-150{max-width: 150px!important;}
+	.w-200{max-width: 200px!important;}
+	.w-300{max-width: 300px!important;}
+	.w-400{max-width: 400px!important;}
+	.w-500{max-width: 500px!important;}
+	.w-600{max-width: 600px!important;}
+	.w-700{max-width: 700px!important;}
+	.w-800{max-width: 800px!important;}
+	.w-900{max-width: 900px!important;}
+	.w-1000{max-width: 1000px!important;}
+}
+
+.no-border{
+	box-shadow: none!important;
+}
+
+.thi-post{
+    p>img{
+        max-width: 100%;
+        display: block;
+        text-align: center;
+        box-shadow: 0px 0 5px 0;
+        margin: auto;
+    }
+    img+em{
+        margin-top: 5px;
+        text-align: center;
+        display: block;
+    }
+}

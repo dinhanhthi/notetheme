@@ -1,0 +1,45 @@
+main figure.highlight{
+	margin: 1em 0px!important;
+	padding: 0 10px;
+}
+
+figure.highlight{
+	max-height: 400px;
+	overflow: auto;
+}
+
+p + div.highlighter-rouge{
+	margin: -10px 0 1em 0!important;
+	overflow: auto;
+}
+
+.highlight{
+  .err{
+    background-color: initial!important;
+    background: none!important;
+  }
+}
+
+li code, p code{
+	background-color: #e7e9ee;
+	color: #0a227d;
+	padding: 1px 4px;
+	border-radius: 4px;
+	font-size: 95%;
+}
+
+pre{
+  code{
+    background-color: inherit;
+    color: inherit;
+    padding: initial;
+  }
+  &.highlight{
+    max-height: 400px;
+  }
+} 
+
+.highlighter-rouge pre{
+	padding: 8px 10px!important;
+	overflow: auto;
+}

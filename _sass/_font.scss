@@ -1,0 +1,46 @@
+html{
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 17px;
+}
+
+.thi-signature{
+	font-family: 'Dancing Script', cursive;
+	text-align: right;
+	font-size: 150%;
+}
+
+.font-title{
+	font-family: 'Dancing Script', cursive;
+	font-size: 50px!important;
+}
+
+.font-chuan{
+	font-size: 17px;
+}
+
+.font-inherit{
+	font-size: inherit;
+}
+
+.text-bold{
+	font-weight: bold;
+}
+
+a {
+  color: forestgreen;
+  &:hover{
+    text-decoration: none;
+    opacity: 0.8;
+  }
+}
+
+.text-white{
+  color: white;
+  a{
+    color: white;
+  }
+}
+
+.text-cap{
+	text-transform: capitalize!important;
+}

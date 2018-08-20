@@ -159,12 +159,12 @@ Results,
 
 {% highlight html %}
 <div class="row" markdown="1">
-<div class="col m12 mr-l-1 l5" markdown="1">
+<div class="col s12 mr-l-1 l5" markdown="1">
 ~~~
 This is the code
 ~~~
 </div>
-<div class="col m12 ml-l-1 l6" markdown="1">
+<div class="col s12 ml-l-1 l6" markdown="1">
 ~~~
 This is the result
 ~~~
@@ -175,12 +175,12 @@ This is the result
 gives
 
 <div class="row" markdown="1">
-<div class="col m12 mr-l-1 l5" markdown="1">
+<div class="col s12 mr-l-1 l5" markdown="1">
 ~~~
 This is the code
 ~~~
 </div>
-<div class="col m12 ml-l-1 l6" markdown="1">
+<div class="col s12 ml-l-1 l6" markdown="1">
 ~~~
 This is the result
 ~~~
@@ -193,14 +193,14 @@ You can change the value of `5` and `6` by other numbers depending on the ratio 
 ### Insert a read-more link
 
 <div class="row" markdown="1">
-<div class="col m12 mr-l-1 l5" markdown="1">
+<div class="col s12 mr-l-1 l5" markdown="1">
 
 ~~~ {% raw %}
 {% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
 {% endraw %} ~~~
 
 </div>
-<div class="col m12 ml-l-1 l6" markdown="1">
+<div class="col s12 ml-l-1 l6" markdown="1">
 
 {% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
 
@@ -214,9 +214,11 @@ If you want something like this,
 
 <div class="thi-step">
 <div class="step" markdown="1">
+<div class="bar"><hr></div>
 Contents in step 1.
 </div>
 <div class="step" markdown="1">
+<div class="bar"><hr></div>
 Contents in step 2.
 </div>
 </div>
@@ -226,9 +228,11 @@ Use below codes,
 {% highlight html %}
 <div  class="thi-step">
 <div class="step" markdown="1">
+<div class="bar"><hr></div>
 Contents in step 1.
 </div>
 <div class="step" markdown="1">
+<div class="bar"><hr></div>
 Contents in step 2.
 </div>
 </div>
@@ -296,7 +300,7 @@ Contents in step 2.
 ### Theorem boxes
 
 <div class="row" markdown="1">
-<div class="col m11 l5 mr-l-1" markdown="1">
+<div class="col s12 l5 mr-l-1" markdown="1">
 
 Use these lines of code
 
@@ -312,7 +316,7 @@ Content
 {% endhighlight %}
 
 </div>
-<div class="col m11 l6 ml-l-1" markdown="1">
+<div class="col s12 l6 ml-l-1" markdown="1">
 
 which give
 
@@ -332,7 +336,7 @@ Content
 ### Notification boxes
 
 <div class="row" markdown="1">
-<div class="col m11 l7 mr-l-1" markdown="1">
+<div class="col s12 l7 mr-l-1" markdown="1">
 
 Use these lines of code
 
@@ -341,7 +345,7 @@ Use these lines of code
 {% endraw %} ~~~
 
 </div>
-<div class="col m11 l4 ml-l-1" markdown="1">
+<div class="col s12 l4 ml-l-1" markdown="1">
 
 which give
 
@@ -351,7 +355,7 @@ which give
 </div>
 
 <div class="row" markdown="1">
-<div class="col m11 l7 mr-l-1" markdown="1">
+<div class="col s12 l7 mr-l-1" markdown="1">
 
 Use these lines of code
 
@@ -360,7 +364,7 @@ Use these lines of code
 {% endraw %} ~~~
 
 </div>
-<div class="col m11 l4 ml-l-1" markdown="1">
+<div class="col s12 l4 ml-l-1" markdown="1">
 
 which give
 
@@ -374,7 +378,7 @@ which give
 ### Insert hide/show box
 
 <div class="row" markdown="1">
-<div class="col m11 l6 mr-l-1" markdown="1">
+<div class="col s12 l6 mr-l-1" markdown="1">
 
 Use these lines of code
 
@@ -392,7 +396,7 @@ Content
 ~~~
 
 </div>
-<div class="col m11 l5 ml-l-1" markdown="1">
+<div class="col s12 l5 ml-l-1" markdown="1">
 
 which give
 
@@ -427,7 +431,7 @@ Nội dung của thông tin thêm.
 ### Insert resume of the post
 
 <div class="row" markdown="1">
-<div class="col m11 l6 mr-l-1" markdown="1">
+<div class="col s12 l6 mr-l-1" markdown="1">
 
 Use these lines of code
 
@@ -442,7 +446,7 @@ Content
 {%endraw%}{% endhighlight %}
 
 </div>
-<div class="col m11 l5 ml-l-1" markdown="1">
+<div class="col s12 l5 ml-l-1" markdown="1">
 
 which give
 
@@ -471,7 +475,10 @@ tags: [algebra, function, theorem]
 
 1. Below the title of each post, you will see "in <category>", for example, this post **in NoteTheme**.
 2. Open file `_data\categories.yml` and add the new category you want
-	- `slug`: the id of this category, it will appear in the url, like `https://dinhanhthi.github.io/NoteTheme/categories#notetheme`
+	- `slug`: the id of this category, it will appear in the url, like
+		~~~
+		https://dinhanhthi.github.io/NoteTheme/categories#notetheme
+		~~~
 	- `name` : the name of this catefory, it will appear on the site, like `NoteTheme`
 
 ### Already-defined tags / categories

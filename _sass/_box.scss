@@ -1,0 +1,44 @@
+// tip 
+.thi-tip{
+	background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 15px;
+  display: table;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+// warning
+.thi-warning{
+	background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 15px;
+  display: table;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+// thi box
+.thi-box{
+	margin: 20px 0;
+  overflow: auto;
+  .box-title{
+    background-color: #2874cf;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px 5px 0 0;
+  }
+  .box-title p{
+    margin: 0;
+  }
+  .box-content{
+    border: 1px #ddd solid;
+    padding: 0 15px;
+  }
+}
