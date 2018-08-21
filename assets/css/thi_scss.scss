@@ -11,15 +11,11 @@
 @import 'font';
 @import 'code';
 
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating){
-  color: lightslategrey;
-  &:hover{
-    color: darkslategray;
-  }
-}
 
-.cards-container .card{
-	border-top: 0.5px #ddd solid;
+.d-flex{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 body {
@@ -36,10 +32,6 @@ p{
 
 .thi-post{
   color: black;
-}
-
-.row .col{
-  padding: 0;
 }
 
 .collapsible-body{
@@ -92,7 +84,8 @@ p ~ ul, p ~ ol{
 }
 
 nav ul a{
-	line-height: 80px;
+  line-height: 80px;
+  font-size: 1.2rem;
 }
 
 /*summerize*/
@@ -136,19 +129,6 @@ table, th, td{
 	font-size: inherit;
 }
 
-.cat-class{
-	color: lightslategrey;
-	text-transform: capitalize!important;
-	font-weight: 500;
-}
-
-.cat-commas:after{
-	content: ",";
-}
-
-.cat-commas:last-child:after{
-	content: ".";
-}
 
 .card-action a:hover{
 	color: chocolate;
@@ -189,8 +169,8 @@ table, th, td{
 }
 
 .cat-tag{
-	font-size: 130%;
-	color: darkslateblue;
+	font-size: 1.5rem;
+	color: #009688;
 }
 
 .search-sidebar{

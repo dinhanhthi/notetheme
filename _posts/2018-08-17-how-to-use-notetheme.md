@@ -1,7 +1,7 @@
 ---
 title: How to use NoteTheme
-categories: notetheme
-tags: [notetheme, jekyll, theme]
+categories: [it,notetheme]
+tags: [jekyll,theme,notetheme]
 maths: 1
 toc: 1
 comment: 1
@@ -230,13 +230,13 @@ Results,
 ### Make side-by-side code and result
 
 {% highlight html %}
-<div class="row" markdown="1">
-<div class="col s12 mr-l-1 l5" markdown="1">
+<div class="row d-flex" markdown="1">
+<div class="col s12 l6" markdown="1">
 ~~~
 This is the code
 ~~~
 </div>
-<div class="col s12 ml-l-1 l6" markdown="1">
+<div class="col s12 l6" markdown="1">
 ~~~
 This is the result
 ~~~
@@ -246,13 +246,13 @@ This is the result
 
 gives
 
-<div class="row" markdown="1">
-<div class="col s12 mr-l-1 l5" markdown="1">
+<div class="row d-flex" markdown="1">
+<div class="col s12 l6" markdown="1">
 ~~~
 This is the code
 ~~~
 </div>
-<div class="col s12 ml-l-1 l6" markdown="1">
+<div class="col s12 l6" markdown="1">
 ~~~
 This is the result
 ~~~
@@ -264,15 +264,15 @@ You can change the value of `5` and `6` by other numbers depending on the ratio 
 
 ### Insert a read-more link
 
-<div class="row" markdown="1">
-<div class="col s12 mr-l-1 l6" markdown="1">
+<div class="row d-flex" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 ~~~ {% raw %}
 {% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
 {% endraw %} ~~~
 
 </div>
-<div class="col s12 ml-l-1 l5" markdown="1">
+<div class="col s12 l5" markdown="1">
 
 {% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
 
@@ -371,8 +371,8 @@ Contents in step 2.
 
 ### Theorem boxes
 
-<div class="row" markdown="1">
-<div class="col s12 l5 mr-l-1" markdown="1">
+<div class="row d-flex" markdown="1">
+<div class="col s12 l5" markdown="1">
 
 Use these lines of code
 
@@ -388,7 +388,7 @@ Content
 {% endhighlight %}
 
 </div>
-<div class="col s12 l6 ml-l-1" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 which give
 
@@ -407,8 +407,8 @@ Content
 
 ### Notification boxes
 
-<div class="row" markdown="1">
-<div class="col s12 l7 mr-l-1" markdown="1">
+<div class="row d-flex" markdown="1">
+<div class="col s12 l8" markdown="1">
 
 Use these lines of code
 
@@ -417,7 +417,7 @@ Use these lines of code
 {% endraw %} ~~~
 
 </div>
-<div class="col s12 l4 ml-l-1" markdown="1">
+<div class="col s12 l4" markdown="1">
 
 which give
 
@@ -426,8 +426,8 @@ which give
 </div>
 </div>
 
-<div class="row" markdown="1">
-<div class="col s12 l7 mr-l-1" markdown="1">
+<div class="row d-flex" markdown="1">
+<div class="col s12 l8" markdown="1">
 
 Use these lines of code
 
@@ -436,7 +436,7 @@ Use these lines of code
 {% endraw %} ~~~
 
 </div>
-<div class="col s12 l4 ml-l-1" markdown="1">
+<div class="col s12 l4" markdown="1">
 
 which give
 
@@ -449,8 +449,8 @@ which give
 
 ### Insert hide/show box
 
-<div class="row" markdown="1">
-<div class="col s12 l6 mr-l-1" markdown="1">
+<div class="row d-flex" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 Use these lines of code
 
@@ -468,7 +468,7 @@ Content
 ~~~
 
 </div>
-<div class="col s12 l5 ml-l-1" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 which give
 
@@ -502,8 +502,8 @@ Nội dung của thông tin thêm.
 
 ### Insert resume of the post
 
-<div class="row" markdown="1">
-<div class="col s12 l6 mr-l-1" markdown="1">
+<div class="row d-flex" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 Use these lines of code
 
@@ -515,7 +515,7 @@ Content
 {%endraw%}{% endhighlight %}
 
 </div>
-<div class="col s12 l5 ml-l-1" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 which give
 
