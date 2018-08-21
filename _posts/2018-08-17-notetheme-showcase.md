@@ -20,6 +20,8 @@ In this post, I will show you all of alread-defined components in NoteTheme so t
 
 </fieldset>
 
+> A bloquequote will be display like this. You can also use [all designed components](https://materializecss.com/) from Materialize if you want.
+
 ## Insert code & figures
 
 You can insert any code you want with the syntax highlight like below
@@ -71,17 +73,21 @@ plt.show()
 </div>
 </div>
 
-{:.nocount}
-### How about Youtube?
+## How about Youtube video?
 
-{% include youtube.html content="8f7eSJOHeYY" %}
+You can insert any size of youtube container on the large screen,
 
+{% include youtube.html content="8f7eSJOHeYY" size="8" %}
+
+... or with smaller one
+
+{% include youtube.html content="8f7eSJOHeYY" size="4" %}
 
 ## Make an interactive coding course online
 
 You even can embed **R/Python** code environment inside a post like this
 
-<div data-datacamp-exercise data-lang="r">
+<div class="mt-2 mb-2" data-datacamp-exercise data-lang="r">
 	<code data-type="pre-exercise-code">
 		# This will get executed each time the exercise gets initialized
 		b = 6
@@ -195,4 +201,4 @@ Follow [this link]({{site.baseurl}}/how-to-use-notetheme) to make an awesome pos
 </div>
 </div>
 
-{% include more.html content="[Thank you and get started!](https://dinhanhthi.github.io/NoteTheme/welcome-to-notetheme)." %}
+{% include more.html content="[Thank you and let's start!](https://dinhanhthi.github.io/NoteTheme/welcome-to-notetheme)." %}

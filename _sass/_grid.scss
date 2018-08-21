@@ -1,0 +1,31 @@
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.div-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// margin
+.mt-2{
+    margin-top: 2rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+
+p{
+	margin: 0.5rem 0;
+}
+
+@media (min-width: 991px){
+    .mr-l-1{
+        margin-right: 0.5rem!important;
+    }
+    .ml-l-1{
+        margin-left: 0.5rem!important;
+    }
+}

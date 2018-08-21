@@ -79,7 +79,7 @@ For example, **Python** with **line numbering**,
 - [Read more about datacamp light](https://github.com/datacamp/datacamp-light)
 - **Example**
 
-	<div data-datacamp-exercise data-lang="r">
+	<div class="mt-2 mb-2" data-datacamp-exercise data-lang="r">
 		<code data-type="pre-exercise-code">
 			# This will get executed each time the exercise gets initialized
 			b = 6
@@ -106,7 +106,7 @@ For example, **Python** with **line numbering**,
 - **Block of codes**
 
 	~~~ html
-	<div data-datacamp-exercise data-lang="r">
+	<div class="mt-2 mb-2" data-datacamp-exercise data-lang="r">
 
 		<code data-type="pre-exercise-code">
 			# This will get executed each time the exercise gets initialized
@@ -175,8 +175,10 @@ https://www.youtube.com/watch?v=wIsK4kQTrIg
 Choose `wIsK4kQTrIg` and put it inside below code
 
 ~~~ {% raw %}
-{% include youtube.html content="wIsK4kQTrIg" %}
+{% include youtube.html content="wIsK4kQTrIg" size="5" %}
 {% endraw %} ~~~
+
+In that, `5` represents the percent your youtube container width in comparison with the page's width, for example, `5` means "50%". You can choose any integer number between `3` and `10`. This size is only available on a wide screen (min width is 993px), when the screen is smaller than 993px, the width becomes automatically 100% of page width.
 
 ## For writing posts
 

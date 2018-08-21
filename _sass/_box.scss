@@ -26,7 +26,7 @@
 
 // thi box
 .thi-box{
-	margin: 20px 0;
+	margin: 2rem 0;
   overflow: auto;
   .box-title{
     background-color: #2874cf;
@@ -41,4 +41,68 @@
     border: 1px #ddd solid;
     padding: 0 15px;
   }
+}
+
+.post-more-info{
+  float: right;
+  width: 30%;
+  border: 3px dotted #2e87e7;
+  margin: 10px 0 10px 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: azure;
+  @media only screen and (max-width: 699px){
+    margin: 0 0 15px 0;
+    float: initial;
+    width: 100%;
+    margin: 2rem 0;
+  }
+}
+
+//summerize
+.tomtat{
+	margin: 10px!important;
+	font-size: 0px!important;
+}
+.leg-title{
+	background: #e8aa04;
+	color: white;
+	font-size: 120%;
+	padding: 4px 10px;
+	border-radius: 5px;
+	font-weight: 500;
+}
+
+.field-set{
+	border: #e8aa04 2px dashed;
+	background: lightyellow;
+	min-width: 0;
+  padding: 0px 20px;
+  margin-top: 1.5rem;
+}
+
+// hide/show
+.collapsible{
+  padding-left: 0!important;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  &> li{
+    list-style-type: none!important;
+  }
+}
+.collapsible-header{
+  font-weight: 500;
+  line-height: inherit!important;
+  min-height: 0!important;
+  padding: 0 0.5rem!important;
+  p{
+    margin: 10px 0!important;
+  }
+  i{
+    line-height: initial!important;
+    margin-right: 0.5rem!important;
+  }
+}
+.collapsible-body{
+	padding: 0 2rem!important;
 }
