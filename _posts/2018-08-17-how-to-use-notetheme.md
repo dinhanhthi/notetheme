@@ -272,7 +272,7 @@ You can change the value of `5` and `6` by other numbers depending on the ratio 
 {% endraw %} ~~~
 
 </div>
-<div class="col s12 l5" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 {% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
 
@@ -281,6 +281,9 @@ You can change the value of `5` and `6` by other numbers depending on the ratio 
 
 
 ### Insert steps
+
+<div class="row d-flex" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 If you want something like this,
 
@@ -294,6 +297,9 @@ Contents in step 1.
 Contents in step 2.
 </div>
 </div>
+
+</div>
+<div class="col s12 l6" markdown="1">
 
 Use below codes,
 
@@ -309,6 +315,9 @@ Contents in step 2.
 </div>
 </div>
 {% endhighlight %}
+
+</div>
+</div>
 
 
 ## Mathematical expressions
@@ -372,7 +381,7 @@ Contents in step 2.
 ### Theorem boxes
 
 <div class="row d-flex" markdown="1">
-<div class="col s12 l5" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 Use these lines of code
 
