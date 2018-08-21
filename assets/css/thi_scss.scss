@@ -14,9 +14,6 @@
 @import 'grid';
 
 // general
-:target{
-  display: block;
-}
 blockquote{
   margin: 2rem 0;
 }
@@ -73,6 +70,9 @@ hr{
 
 .tag-sec{
   display: none;
+}
+:target{
+  display: block;
 }
 
 
