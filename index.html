@@ -9,6 +9,26 @@ css: ["index.css"]
     {% include search_form.html %}
   </div>
 
+  <div style="margin-top: 1rem;">
+    <h2 class="h2-title">Categories</h2>
+    <div class="tag-list">
+      {% for cat in site.categories %}
+        {% for catDat in site.data.categories %}
+          {% if catDat.slug == cat[0] %}
+            {% assign catego = catDat %}
+          {% endif %}
+        {% endfor %}
+        {% if catego %}
+          {% capture test %}{{cat[0] | slice: 0}}{% endcapture %}
+          {% capture testup %}{{cat[0] | slice: 0 | upcase}}{% endcapture %}
+          <a class="tag-chip" href="{{ site.baseurl }}/categories#{{cat[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{ catego.name }}</div></a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <h2 class="h2-title">List of notes</h2>
+
   <div class="thi-columns">
     <ul class="tag-post">
     {% for post in paginator.posts %}
@@ -62,4 +82,17 @@ css: ["index.css"]
       </li>
     </ul>
   </div>
+
+  <div class="tag-div">
+    <h2 class="h2-title">Tags</h2>
+    <div class="tag-list">
+      {% for tag in site.tags %}
+        {% capture test %}{{tag[0] | slice: 0}}{% endcapture %}
+        {% capture testup %}{{tag[0] | slice: 0 | upcase}}{% endcapture %}
+        <a class="tag-chip" href="{{ site.baseurl }}/tags#{{tag[0] | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{tag[0]}}</div></a>
+      {% endfor %}
+    </div>
+  </div>
+  
 </div>
+
