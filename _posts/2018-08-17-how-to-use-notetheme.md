@@ -14,6 +14,28 @@ In this tutorial, I suppose that you have already [installed NoteTheme]({{ site.
 
 {% include toc.html %}
 
+## Front Matter
+
+Begein of each post, you need to be careful to choose the right front matter info for the post. What's front matter? Something like this
+
+~~~ {%raw%}
+---
+layout: post
+title: How to use NoteTheme?
+---
+{% endraw %} ~~~
+
+There are some already-defined components on NoteTheme that you could use (If you don't want to use something, **remember to REMOVE it**)
+
+- `maths: 1` add this if you wanna use mathematic expression in the post.
+- `toc: 1` if you wanna display table of contents on the left sidebar
+- `comment: 1` if you wanna use disqus comment system for this post
+- `datacamp: 1` if you wanna use datacamp light
+- `categories: [notetheme,jekyll]` add category you want
+- `tags: [notetheme,jekyll,code]` add tag you want
+- `date: 2018-08-21` if you update the post, write the updated date
+
+
 ## Insert code
 
 ### Syntax highlighting
@@ -499,12 +521,12 @@ Content
 ### Insert blockquote
 
 <p class="post-more-info" markdown="1">
-Nội dung của thông tin thêm.
+The content of extra info of the post.
 </p>
 
 {% highlight html %}
 <p class="post-more-info" markdown="1">
-Nội dung của thông tin thêm.
+The content of extra info of the post.
 </p>
 {% endhighlight %}
 
