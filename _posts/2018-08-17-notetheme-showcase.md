@@ -8,9 +8,6 @@ comment: 1
 datacamp: 1
 ---
 
-{% assign fig = "/images/posts/" %}
-
-
 In this post, I will show you all of alread-defined components in NoteTheme so that you can use it in the fugure. If you have interests on some components, jut read **[how to make it]({{ site.baseurl }}/how-to-use-notetheme)**.
 
 <fieldset class="field-set" markdown="1">
@@ -54,7 +51,7 @@ plt.show()
 </div>
 <div class="col s12 l6" markdown="1">
 
-![]({{ fig }}/f1.svg){:.w-400 .no-border}
+![]({{ site.baseurl }}/images/posts/f1.svg){:.w-400 .no-border}
 
 </div>
 </div>
@@ -62,14 +59,14 @@ plt.show()
 <div class="row d-flex" markdown="1">
 <div class="col s12 l6" markdown="1">
 
-![]({{ fig }}/dog.png){:.w-300 .no-border}
+![]({{ site.baseurl }}/images/posts/dog.png){:.w-300 .no-border}
 
 </div>
 <div class="col s12 l6" markdown="1">
 
 ... or something like this, but on the right! 
 
-**Oh, I'm a very small dog <img class="img-inline" src="{{fig}}/dog-inline.png" />  and I'm inline text.**
+**Oh, I'm a very small dog <img class="img-inline" src="{{ site.baseurl }}/images/posts/dog-inline.png" />  and I'm inline text.**
 
 </div>
 </div>
