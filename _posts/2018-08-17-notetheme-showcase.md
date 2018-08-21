@@ -198,4 +198,4 @@ Follow [this link]({{site.baseurl}}/how-to-use-notetheme) to make an awesome pos
 </div>
 </div>
 
-{% include more.html content="[Thank you and get started!]({{site.baseurl}}/welcome-to-notetheme)." %}
+{% include more.html content="[Thank you and get started!](https://dinhanhthi.github.io/NoteTheme/welcome-to-notetheme)." %}
