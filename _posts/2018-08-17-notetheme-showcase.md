@@ -1,5 +1,5 @@
 ---
-title: Showcase
+title: Some showcases with NoteTheme
 categories: [notetheme]
 tags: [jekyll,theme,notetheme]
 maths: 1
@@ -225,5 +225,7 @@ Follow [this link]({{site.baseurl}}/how-to-use-notetheme) to make an awesome pos
 </div>
 </div>
 </div>
+
+Just use <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy and paste shortcodes defined in NoteTheme.
 
 {% include more.html content="[Thank you and let's start!](https://dinhanhthi.github.io/NoteTheme/welcome-to-notetheme)." %}

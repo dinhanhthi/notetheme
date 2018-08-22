@@ -97,6 +97,10 @@ $ sudo apt-get update
 
 	**Tips**: For a beautiful display, put `{{ "{% raw " }}%}` and `{{ "{% endraw " }}%}` exactly like the above code.
 
+### Keyboard
+
+You can also insert a keyboard like this <kbd>Ctrl</kbd> + <kbd>B</kbd>, just use `<kbd>Ctrl</kbd>`.
+
 
 ## Insert DataCamp R/Python code environment
 
