@@ -39,14 +39,12 @@ js: ["post.js"]
       </div>
     </div>
 
-    <div>
-      <span>
-        {% for tag in page.tags %}
-        {% capture test %}{{tag | slice: 0}}{% endcapture %}
-        {% capture testup %}{{tag | slice: 0 | upcase}}{% endcapture %}
-        <a href="{{site.baseurl}}/tags#{{tag | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip">{{tag}}</div></a>
-        {% endfor %}
-      </span>
+    <div class="tag-list">
+      {% for tag in page.tags %}
+      {% capture test %}{{tag | slice: 0}}{% endcapture %}
+      {% capture testup %}{{tag | slice: 0 | upcase}}{% endcapture %}
+      <a class="tag-chip" href="{{site.baseurl}}/tags#{{tag | slugify}}{% if test == testup %}_cap{% endif %}"><div class="chip z-depth-1">{{tag}}</div></a>
+      {% endfor %}
     </div>
     {% include related-posts.html %}
     {% include search_form.html %}
