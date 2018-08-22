@@ -10,8 +10,10 @@ datacamp: 1
 
 In this post, I will show you all of alread-defined components in NoteTheme so that you can use it in the fugure. If you have interests on some components, jut read **[how to make it]({{ site.baseurl }}/how-to-use-notetheme)**.
 
+{% include tip.html content="I'm not a native English speaker, please ignore my bad expressions." %}
+
 <fieldset class="field-set" markdown="1">
-<legend class="leg-title">Brief</legend>
+<legend class="leg-title">TL;DR</legend>
 
 - Show the post in a flexible way.
 - Show the figures any place
@@ -20,9 +22,14 @@ In this post, I will show you all of alread-defined components in NoteTheme so t
 
 </fieldset>
 
-> A bloquequote will be display like this. You can also use [all designed components](https://materializecss.com/) from Materialize if you want.
+> A bloquequote will display like this. You can also use [all designed components](https://materializecss.com/) from Materialize if you want.
+
+
 
 ## Insert code & figures
+
+<div class="row d-flex" markdown="1">
+<div class="col s12 l6" markdown="1">
 
 You can insert any code you want with the syntax highlight like below
 
@@ -40,6 +47,19 @@ This is an example of \LaTeX document, but you can use other language like C++, 
 
 \end{document}
 ~~~
+
+</div>
+<div class="col s12 l6" markdown="1">
+
+or something appears in the command line windows like this
+
+<div class="terminal">
+$ sudo apt-get update
+</div>
+
+</div>
+</div>
+
 
 You can even couple inseting a code block with a side-by-side figure like this
 
@@ -181,23 +201,28 @@ If you need something more, just let me know in the comment below this post!
 </p>
 
 <div  class="thi-step">
-<div class="step" markdown="1">
-<div class="bar"><hr></div>
-
+<div class="step">
+<div class="step-number">
+</div>
+<div class="step-content" markdown="1">
 Download [this theme](https://github.com/dinhanhthi/NoteTheme).
-
 </div>
-<div class="step" markdown="1">
-<div class="bar"><hr></div>
+</div>
 
+<div class="step">
+<div class="step-number">
+</div>
+<div class="step-content" markdown="1">
 Read [this link]({{site.baseurl}}/how-to-install-notetheme) to know how to install it and create a new website for yourself.
-
 </div>
-<div class="step" markdown="1">
-<div class="bar"><hr></div>
+</div>
 
+<div class="step">
+<div class="step-number">
+</div>
+<div class="step-content" markdown="1">
 Follow [this link]({{site.baseurl}}/how-to-use-notetheme) to make an awesome post like this one.
-
+</div>
 </div>
 </div>
 

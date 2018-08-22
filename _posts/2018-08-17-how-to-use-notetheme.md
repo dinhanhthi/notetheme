@@ -16,7 +16,7 @@ In this tutorial, I suppose that you have already [installed NoteTheme]({{ site.
 
 ## Front Matter
 
-Begein of each post, you need to be careful to choose the right front matter info for the post. What's front matter? Something like this
+Begin of each post, you need to be careful to choose the right [front matter](https://jekyllrb.com/docs/frontmatter/) for that post. What's front matter? Something like this
 
 ~~~ {%raw%}
 ---
@@ -27,7 +27,7 @@ title: How to use NoteTheme?
 
 There are some already-defined components on NoteTheme that you could use (If you don't want to use something, **remember to REMOVE it**)
 
-- `maths: 1` add this if you wanna use mathematic expression in the post.
+- `maths: 1` add this if you wanna use mathematical expression in the post.
 - `toc: 1` if you wanna display table of contents on the left sidebar
 - `comment: 1` if you wanna use disqus comment system for this post
 - `datacamp: 1` if you wanna use datacamp light
@@ -36,9 +36,14 @@ There are some already-defined components on NoteTheme that you could use (If yo
 - `date: 2018-08-21` if you update the post, write the updated date
 
 
-## Insert code
+## Insert codes
 
 ### Syntax highlighting
+
+<div class="row d-flex" markdown="1">
+<div class="col s12 l6" markdown="1">
+
+You can insert any block of code you want with a syntax highlight effect like below
 
 Available languages : `ruby`, `python`, `c`, `matlab`, `latex`, `html`, `css`, `javascript`.
 
@@ -47,7 +52,8 @@ Available languages : `ruby`, `python`, `c`, `matlab`, `latex`, `html`, `css`, `
 
 {% endhighlight %}
 {% endraw %} ~~~
-
+</div>
+<div class="col s12 l6" markdown="1">
 For example, **Python** with **line numbering**,
 
 ~~~ {%raw%}
@@ -55,6 +61,25 @@ For example, **Python** with **line numbering**,
 
 {% endhighlight %}
 {% endraw %} ~~~
+</div>
+</div>
+
+<div class="row d-flex" markdown="1">
+<div class="col s12 l6" markdown="1">
+or something appears in the command line window like this
+<div class="terminal">
+$ sudo apt-get update
+</div>
+</div>
+<div class="col s12 l6" markdown="1">
+by using
+~~~ html
+<div class="terminal">
+$ sudo apt-get update
+</div>
+~~~
+</div>
+</div>
 
 
 ### Insert liquid code
@@ -311,14 +336,21 @@ You can change the value of `5` and `6` by other numbers depending on the ratio 
 
 If you want something like this,
 
-<div class="thi-step">
-<div class="step" markdown="1">
-<div class="bar"><hr></div>
-Contents in step 1.
+<div  class="thi-step">
+<div class="step">
+<div class="step-number">
 </div>
-<div class="step" markdown="1">
-<div class="bar"><hr></div>
-Contents in step 2.
+<div class="step-content" markdown="1">
+Content in step 1.
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">
+</div>
+<div class="step-content" markdown="1">
+Content in step 2
+</div>
 </div>
 </div>
 
@@ -327,18 +359,23 @@ Contents in step 2.
 
 Use below codes,
 
-{% highlight html %}
+~~~ html
 <div  class="thi-step">
-<div class="step" markdown="1">
-<div class="bar"><hr></div>
-Contents in step 1.
-</div>
-<div class="step" markdown="1">
-<div class="bar"><hr></div>
-Contents in step 2.
+<div class="step">
+<div class="step-number"></div>
+<div class="step-content" markdown="1">
+Content in step 1.
 </div>
 </div>
-{% endhighlight %}
+
+<div class="step">
+<div class="step-number"></div>
+<div class="step-content" markdown="1">
+Content in step 2
+</div>
+</div>
+</div>
+~~~
 
 </div>
 </div>
@@ -532,6 +569,7 @@ The content of extra info of the post.
 </p>
 {% endhighlight %}
 
+> Other normal blockquote like this.
 
 ### Insert resume of the post
 
