@@ -67,15 +67,15 @@ For example, **Python** with **line numbering**,
 <div class="row d-flex" markdown="1">
 <div class="col s12 l6" markdown="1">
 or something appears in the command line window like this
-<div class="terminal">
-$ sudo apt-get update
+<div class="terminal" markdown="1">
+`$ sudo apt-get update`
 </div>
 </div>
 <div class="col s12 l6" markdown="1">
 by using
 ~~~ html
-<div class="terminal">
-$ sudo apt-get update
+<div class="terminal" markdown="1">
+`$ sudo apt-get update`
 </div>
 ~~~
 </div>

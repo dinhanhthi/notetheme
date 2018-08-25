@@ -64,10 +64,17 @@ li ul:not(.browser-default){
   color: black;
 }
 
+.collapsible{
+  overflow: hidden;
+}
+
 .collapsible-body{
-  & > ul{
-    margin-top: 1rem;
-  }
+  padding: 1rem!important;
+}
+
+li > .collapsible{
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 hr{
