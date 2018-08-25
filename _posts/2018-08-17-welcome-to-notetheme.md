@@ -10,6 +10,7 @@ This theme is folked from [Matjek theme](https://shawnteoh.github.io/matjek/) wh
 
 I have modified a lot from Matjek so that we have this theme for **the only purpose of note-taking**. This theme is designed for ones who work much on **Maths and Code** with a lot of useful components.
 
+{% include more.html content="[Take a look with some showcases!](https://dinhanhthi.github.io/NoteTheme/notetheme-showcase)." %}
 
 ## Features
 
