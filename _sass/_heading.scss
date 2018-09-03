@@ -32,14 +32,14 @@ h4{
         color: #266ac1;
         margin-top: 3rem;
         overflow: hidden;
-        &:first-child{
+        &:first-of-type{
             margin-top: 1rem!important;
         }
         &:before {
             content: counter(h2counter) ".\0000a0";
             counter-increment: h2counter;
         }
-        &+h3{
+        &~ h3:first-of-type, &+ h3{
             margin-top: 1rem;
         }
     }
@@ -47,6 +47,9 @@ h4{
         font-size: 1.3rem;
         color: #333;
         margin-top: 2.2rem;
+    }
+    h2 + .thi-more + h3{
+        margin-top: 1rem;
     }
 
     // numering
