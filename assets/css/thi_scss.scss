@@ -52,6 +52,14 @@ blockquote{
   }
 }
 
+.row .col{
+	padding: 0;
+}
+
+.thi-post .row .col{
+	padding: 0 0.75rem;
+}
+
 body {
   counter-reset: h2counter;
 }
@@ -108,9 +116,6 @@ hr{
     @media only screen and (max-width: 992px){
       text-align: center;
     }
-  }
-  &+ .divider{
-    margin-bottom: 2rem;
   }
 }
 
