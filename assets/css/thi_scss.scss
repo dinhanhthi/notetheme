@@ -68,10 +68,6 @@ li ul:not(.browser-default){
   padding-left: 30px;
 }
 
-.thi-post{
-  color: black;
-}
-
 .collapsible{
   overflow: hidden;
 }
@@ -86,8 +82,8 @@ li > .collapsible{
 }
 
 hr{
-  margin: 2rem auto;
-  width: 40%;
+  	margin: 1rem 0;
+	border: 1px solid #eee;
 }
 
 .tag-sec{
@@ -188,15 +184,53 @@ table, th, td{
 }
 
 .thi-more{
-	font-size: 105%;
+	font-size: 1.05rem;
 	color: darkcyan;
-  font-weight: 500;
+	font-weight: 500;
+	margin: 1rem 0;
+	a{
+		color: darkcyan;
+	}
+	i{
+	margin-left: -10px;
+		float: left;
+	}
+}
+.thi-download{
+	font-size: 1.05rem;
+	color: #bb8821;
+	font-weight: 500;
+	margin: 1rem 0;
+	a{
+		color: #bb8821;
+	}
+	i{
+		float: left;
+		margin-right: 5px;
+	}
+}
+.see-again{
+  color: #5b119f;
   margin: 1rem 0;
   a{
-    color: darkcyan;
+    color: #925fc2;
+    border-bottom: 1px solid #925fc2;
+    padding-bottom: 2px;
+    font-weight: 500;
   }
   i{
-    margin-left: -10px;
-    float: left;
+    vertical-align: middle;
   }
+  span{
+    vertical-align: middle;
+  }
+  & + ul, ol{
+	margin-top: 1rem;
+  }
+}
+
+.MathJax_Display{
+	@media only screen and (max-width: 600px){
+		overflow: auto;
+	}
 }

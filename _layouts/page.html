@@ -16,7 +16,10 @@ css: ["page.css"]
 		  <h2>{{page.title}}</h2>
 		</div>
 		<div class="row">
-		  {{ content }}
+			{{ content }}
+			{% if site.disqus_shortname and page.comment %}
+			  {% include disqus.html %}
+			{% endif %}
 		</div>
 	</div>
 </main>

@@ -24,6 +24,14 @@
   margin: 2rem 0;
 }
 
+.thi-tip a, thi-warning a{
+	text-decoration: underline;
+}
+
+li > .thi-tip, .thi-warning{
+	margin: 0.5rem 0;
+}
+
 // thi box
 .thi-box{
 	margin: 2rem 0;
@@ -114,4 +122,8 @@
   margin: 1.5rem auto;
   background: #e0ffff7a;
   width: fit-content;
+  @media only screen and (max-width: 600px){
+    width: 100%;
+    overflow: auto;
+  }
 }

@@ -1,10 +1,3 @@
-@mixin transition($args...)
-  -webkit-transition: $args
-  -moz-transition: $args
-  -ms-transition: $args
-  -o-transition: $args
-  transition: $args
-
 .tag-chip
   color: #616161
   margin-right: 5px
@@ -18,8 +11,6 @@
       color: #fff
       background-color: #616161
 
-  div
-    @include transition(all .3s ease-in-out)
 
 .tag-div
   .divider
@@ -40,10 +31,8 @@ ul
 
       li
         list-style-position: inside
-        padding-left: 40px
+        padding-left: 20px
 
         &:hover
           list-style-type: circle
-          padding-left: 20px
-
-        @include transition(all .2s ease-in-out)
+          color: #ed143d

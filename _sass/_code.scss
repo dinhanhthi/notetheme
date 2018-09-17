@@ -13,6 +13,14 @@ p + div.highlighter-rouge{
 	overflow: auto;
 }
 
+li p+div.highlighter-rouge{
+	// margin: -20px 0 0 0!important;
+}
+
+li > div.highlighter-rouge{
+	margin: -10px 0 0 0!important;
+}
+
 .highlight{
   .err{
     background-color: initial!important;

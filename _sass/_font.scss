@@ -24,6 +24,7 @@ html{
 
 .text-bold{
 	font-weight: bold;
+	color: #111;
 }
 
 a {
@@ -43,4 +44,41 @@ a {
 
 .text-cap{
 	text-transform: capitalize!important;
+}
+
+.thi-post{
+	color: #444;
+	strong, b{
+		color: #111;
+	}
+}
+
+new{
+	&::before{
+		content: 'new';
+		background: #ff5050;
+		color: yellow;
+		padding: 1px 5px;
+		font-family: 'Courier New', Courier, monospace;
+		font-weight: 600;
+		border-radius: 5px;
+	}
+	p{
+		display: initial;
+	}
+}
+
+update{
+	&::before{
+		content: 'update';
+		background: #d050ff;
+		color: yellow;
+		padding: 1px 5px;
+		font-family: 'Courier New', Courier, monospace;
+		font-weight: 600;
+		border-radius: 5px;
+	}
+	p{
+		display: initial;
+	}
 }

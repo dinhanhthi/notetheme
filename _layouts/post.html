@@ -1,6 +1,6 @@
 ---
 layout: default
-css: ["post.css","toc-sidebar.css"]
+css: ["post.css"]
 js: ["post.js"]
 ---
 
@@ -20,14 +20,14 @@ js: ["post.js"]
         <span style="display: initial;" class="cat-class">{{page.date | date: "%d/%m/%Y"}}</span>,
         in
         {% for cat in page.categories %}
-        {% for catDat in site.data.categories %}
-          {% if catDat.slug == cat %}
-            {% assign catego = catDat %}
+          {% for catDat in site.data.categories %}
+            {% if catDat.slug == cat %}
+              {% assign catego = catDat %}
+            {% endif %}
+          {% endfor %}
+          {% if catego %}
+            <a class="cat-class cat-commas" href="{{site.baseurl}}/categories#{{cat | slugify}}">{{ catego.name }}</a>{% unless forloop.last %},{% else %}.{% endunless %}
           {% endif %}
-        {% endfor %}
-        {% if catego %}
-          <a class="cat-class cat-commas" href="{{site.baseurl}}/categories#{{cat | slugify}}">{{ catego.name }}</a>
-        {% endif %}
         {% endfor %}
       </span>
     </div>
