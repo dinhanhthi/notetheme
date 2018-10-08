@@ -65,6 +65,9 @@ new{
 	}
 	p{
 		display: initial;
+		&~ul, &~ol{
+			margin-top: 1rem;
+		}
 	}
 }
 
@@ -80,5 +83,8 @@ update{
 	}
 	p{
 		display: initial;
+		&~ul, &~ol{
+			margin-top: 1rem;
+		}
 	}
 }

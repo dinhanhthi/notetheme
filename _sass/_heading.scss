@@ -44,6 +44,7 @@ h4{
         }
     }
     h3{
+        counter-reset: h4counter;
         font-size: 1.3rem;
         color: #333;
         margin-top: 2.2rem;
@@ -66,9 +67,13 @@ h4{
         counter-increment: none;
     }
     h4{
-        font-size: 1.05rem;
+        font-size: 1.25rem;
         font-weight: 500;
         color: darkgreen;
+        &:before {
+            content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0";
+            counter-increment: h4counter;
+        }
     }
 }
 

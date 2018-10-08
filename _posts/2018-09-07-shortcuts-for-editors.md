@@ -4,7 +4,8 @@ categories: [it]
 tags: [jekyll,notetheme]
 maths: 1
 toc: 1
-date: 2018-09-16
+snippet: 1
+date: 2018-10-08
 ---
 
 This post is only for editors, please read other posts.
@@ -22,6 +23,7 @@ There are some already-defined components on NoteTheme that you could use (If yo
 - `categories: [notetheme,jekyll]` add category you want
 - `tags: [notetheme,jekyll,code]` add tag you want
 - `date: 2018-08-21` if you update the post, write the updated date
+- <update />`snippet: 1` if you want to pin this post to the Snippets section.
 
 ## Texts
 
@@ -38,11 +40,13 @@ There are some already-defined components on NoteTheme that you could use (If yo
 - **The rule**: use `{% raw %}{{"{% endraw %}` before the key-word and end with `{% raw %}"}}{% endraw %}` before the end of key-word.
 - **An easier way**: use `{{ "{% raw " }}%}` and `{{ "{% endraw " }}%}` around the key-word. These two commands are also used for a block of codes, 
 
-	~~~
+  ~~~
+  
+  ~~~
 ~~~ {{ "{% raw " }}%}{% raw %}{% for %}
 // các dòng codes
 {% end for %}{% endraw %}{{ "{% endraw " }}%} ~~~
-	~~~
+~~~
 
 	**Tips**: For a beautiful display, put `{{ "{% raw " }}%}` and `{{ "{% endraw " }}%}` exactly like the above code.
 
@@ -51,20 +55,23 @@ There are some already-defined components on NoteTheme that you could use (If yo
 - **Normal way**
 
     ~~~ {% raw %}
-  ![](/link/to/figure/){:.w-500 .no-border}
+      ![](/link/to/figure/){:.w-500 .no-border}
     {% endraw %} ~~~
+    ~~~
 
 - **Inline figures**
 
     ~~~ {% raw %}
-  {% include img-inline.html content="/link/to/figure/" %}
+      {% include img-inline.html content="/link/to/figure/" %}
     {% endraw %} ~~~
+    ~~~
 
 - **Youtube video**
 
     ~~~ {% raw %}
-  {% include youtube.html content="wIsK4kQTrIg" size="5" %}
+      {% include youtube.html content="wIsK4kQTrIg" size="5" %}
     {% endraw %} ~~~
+    ~~~
 
 
 ## Boxes
@@ -153,14 +160,14 @@ Content
 
 Inserting heading only on toc (not inside the post)
 
-~~~ {% raw %}
+​~~~ {% raw %}
 {:.notdisplay}
 # Hidden deading
 {% endraw %} ~~~
 
 ### Columns for lists
 
-~~~ html
+​~~~ html
 <div class="thi-columns" markdown="1">
 - item 1
 - item 2
@@ -194,7 +201,7 @@ Read-more link
 
 See again
 
-~~~ html
+​~~~ html
 <div class="see-again">
 <i class="material-icons">settings_backup_restore</i>
 <span markdown="1">
@@ -211,7 +218,7 @@ Download
 
 ### Steps
 
-~~~ html
+​~~~ html
 <div  class="thi-step">
 <div class="step">
 <div class="step-number"></div>
