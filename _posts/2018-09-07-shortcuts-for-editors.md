@@ -23,7 +23,7 @@ There are some already-defined components on NoteTheme that you could use (If yo
 - `categories: [notetheme,jekyll]` add category you want
 - `tags: [notetheme,jekyll,code]` add tag you want
 - `date: 2018-08-21` if you update the post, write the updated date
-- <update />`snippet: 1` if you want to pin this post to the Snippets section.
+- `snippet: 1` if you want to pin this post to the Snippets section.
 
 ## Texts
 
@@ -41,12 +41,10 @@ There are some already-defined components on NoteTheme that you could use (If yo
 - **An easier way**: use `{{ "{% raw " }}%}` and `{{ "{% endraw " }}%}` around the key-word. These two commands are also used for a block of codes, 
 
   ~~~
-  
+  ~~~ {{ "{% raw " }}%}{% raw %}{% for %}
+  // line of codes
+  {% end for %}{% endraw %}{{ "{% endraw " }}%} ~~~
   ~~~
-~~~ {{ "{% raw " }}%}{% raw %}{% for %}
-// các dòng codes
-{% end for %}{% endraw %}{{ "{% endraw " }}%} ~~~
-~~~
 
 	**Tips**: For a beautiful display, put `{{ "{% raw " }}%}` and `{{ "{% endraw " }}%}` exactly like the above code.
 
@@ -54,24 +52,21 @@ There are some already-defined components on NoteTheme that you could use (If yo
 
 - **Normal way**
 
-    ~~~ {% raw %}
-      ![](/link/to/figure/){:.w-500 .no-border}
-    {% endraw %} ~~~
-    ~~~
+  ~~~ {% raw %}
+  ![](/link/to/figure/){:.w-500 .no-border}
+  {% endraw %} ~~~
 
 - **Inline figures**
 
-    ~~~ {% raw %}
-      {% include img-inline.html content="/link/to/figure/" %}
-    {% endraw %} ~~~
-    ~~~
+  ~~~ {% raw %}
+  {% include img-inline.html content="/link/to/figure/" %}
+  {% endraw %} ~~~
 
 - **Youtube video**
 
-    ~~~ {% raw %}
-      {% include youtube.html content="wIsK4kQTrIg" size="5" %}
-    {% endraw %} ~~~
-    ~~~
+  ~~~ {% raw %}
+  {% include youtube.html content="wIsK4kQTrIg" size="5" %}
+  {% endraw %} ~~~
 
 
 ## Boxes
@@ -95,79 +90,72 @@ Content
 
 - Info
 
-	~~~ html
+  ~~~ html
   <p markdown="1" class="thi-tip">
-    <i class="material-icons mat-icon">info</i>
-	content
+  <i class="material-icons mat-icon">info</i>
+  content
   </p>
-	~~~
+  ~~~
 
 - Error
 
-	~~~ html
-	<p markdown="1" class="thi-tip">
-		<i class="material-icons mat-icon">error</i>
-		content
-	</p>
-	~~~
+  ~~~ html
+  <p markdown="1" class="thi-tip">
+  <i class="material-icons mat-icon">error</i>
+  content
+  </p>
+  ~~~
 
 
 ### Pull quotes
 
-    ~~~ html
-    <p class="post-more-info" markdown="1">
-    The content of extra info of the post.
-    </p>
-    ~~~
+~~~ html
+<p class="post-more-info" markdown="1">
+The content of extra info of the post.
+</p>
+~~~
 
 ### Summarization box
 
-    ~~~ html
-    <fieldset class="field-set" markdown="1">
-    <legend class="leg-title">Title</legend>
-    Content
-    </fieldset>
-    ~~~
+~~~ html
+<fieldset class="field-set" markdown="1">
+<legend class="leg-title">Title</legend>
+Content
+</fieldset>
+~~~
 
 ### Theorem style
 
-    ~~~ html
-    <div class="thi-box" markdown="1">
-    <div class="box-title" markdown="1">
-    **Title**
-    </div>
-    <div class="box-content" markdown="1">
-    Content
-    </div>
-    </div>
-    ~~~
+~~~ html
+<div class="thi-box" markdown="1">
+<div class="box-title" markdown="1">
+**Title**
+</div>
+<div class="box-content" markdown="1">
+Content
+</div>
+</div>
+~~~
 
 ### Important boxes
 
-    ~~~ html
-    <div class="p-mark" markdown="1">
-    Content
-    </div>
-    ~~~
+~~~ html
+<div class="p-mark" markdown="1">
+Content
+</div>
+~~~
 
 ## Others
 
-### Toc
+### Add toc
 
 ~~~ {% raw %}
 {% include toc.html %}
 {% endraw %} ~~~
 
-Inserting heading only on toc (not inside the post)
-
-​~~~ {% raw %}
-{:.notdisplay}
-# Hidden deading
-{% endraw %} ~~~
-
 ### Columns for lists
 
-​~~~ html
+~~~{% raw %} html
 <div class="thi-columns" markdown="1">
 - item 1
 - item 2
@@ -176,7 +164,7 @@ Inserting heading only on toc (not inside the post)
 - item 5
 - item 6
 </div>
-~~~
+{% endraw %}~~~
 
 ### Side by side
 
@@ -193,15 +181,9 @@ This is the result
 
 ### Links
 
-Read-more link
-
-~~~ {% raw %}
-{% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
-{% endraw %} ~~~
-
 See again
 
-​~~~ html
+~~~ html
 <div class="see-again">
 <i class="material-icons">settings_backup_restore</i>
 <span markdown="1">
@@ -209,6 +191,12 @@ Content
 </span>
 </div>
 ~~~
+
+Read-more link
+
+~~~ {% raw %}
+{% include more.html content="[Welcome to Math2IT](http://math2it.com)." %}
+{% endraw %} ~~~
 
 Download
 
@@ -218,7 +206,7 @@ Download
 
 ### Steps
 
-​~~~ html
+~~~ html
 <div  class="thi-step">
 <div class="step">
 <div class="step-number"></div>
