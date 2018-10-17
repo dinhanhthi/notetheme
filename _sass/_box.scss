@@ -103,8 +103,9 @@ li > .thi-tip, .thi-warning{
   line-height: inherit!important;
   min-height: 0!important;
   padding: 0.5rem!important;
-  p{
-    margin: 10px 0!important;
+  &>p{
+    // margin: 10px 0!important;
+    margin: 0;
   }
   i{
     line-height: initial!important;
