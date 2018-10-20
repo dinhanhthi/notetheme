@@ -8,7 +8,7 @@
   padding: 15px;
   display: table;
   width: 100%;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 // warning
@@ -21,14 +21,14 @@
   padding: 15px;
   display: table;
   width: 100%;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
-.thi-tip a, thi-warning a{
+.thi-tip a, .thi-warning a{
 	text-decoration: underline;
 }
 
-li > .thi-tip, .thi-warning{
+li >.thi-tip, li>.thi-warning{
 	margin: 0.5rem 0;
 }
 

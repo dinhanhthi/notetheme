@@ -100,7 +100,7 @@ Content
 - Error
 
   ~~~ html
-  <p markdown="1" class="thi-tip">
+  <p markdown="1" class="thi-warning">
   <i class="material-icons mat-icon">error</i>
   content
   </p>
