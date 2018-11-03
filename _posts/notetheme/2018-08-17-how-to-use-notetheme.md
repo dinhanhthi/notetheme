@@ -1,6 +1,6 @@
 ---
 title: How to use NoteTheme
-categories: [it,notetheme]
+categories: [notetheme]
 tags: [jekyll,theme,notetheme]
 maths: 1
 toc: 1
