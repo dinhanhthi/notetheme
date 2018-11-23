@@ -34,4 +34,4 @@ I have modified a lot from Matjek so that we have this theme for **the only purp
 
 ## Contact & support
 
-Email me at: [dinhanhthimail@gmail.com](http://disqus.com)
+Email me at: [dinhanhthi@gmail.com](mailto:dinhanhthi@gmail.com)
