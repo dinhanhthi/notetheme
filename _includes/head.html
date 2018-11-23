@@ -22,6 +22,18 @@
     <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
   {% endif %}
 
+  <!-- page's cover -->
+  {% if page.bigimg %}
+    <meta property="og:image" content="{{site.url}}{{site.baseurl}}{{ page.bigimg }}" />
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  {% else %}
+    <meta property="og:image" content="{{site.url}}{{site.baseurl}}/images/defaultCoverPost.png" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1234">
+    <meta property="og:image:height" content="592">
+  {% endif %}
+
   {% if page.maths or page.math %}
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});

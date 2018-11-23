@@ -24,6 +24,7 @@ There are some already-defined components on NoteTheme that you could use (If yo
 - `tags: [notetheme,jekyll,code]` add tag you want
 - `date: 2018-08-21` if you update the post, write the updated date
 - `snippet: 1` if you want to pin this post to the Snippets section.
+- `bigimg`: background photo of the post (showing on shared post on facebook)
 
 ## Texts
 
