@@ -24,7 +24,7 @@ I have modified a lot from Matjek so that we have this theme for **the only purp
 ## How to install
 
 - Download from [Github repository](https://github.com/dinhanhthi/NoteTheme). Please change to branch **gh-pages** to see the whole code files.
-- Follow [this instruction](https://dinhanhthi.github.io/how-to-install-notetheme) carefully. I show you **from the beginning** how to create a github page with jekyll and then to apply NoteTheme and use it.
+- Follow [this instruction](https://dinhanhthi.github.io/NoteTheme/how-to-install-notetheme) carefully. I show you **from the beginning** how to create a github page with jekyll and then to apply NoteTheme and use it.
 
 
 ## How to use it?
