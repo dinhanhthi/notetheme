@@ -29,7 +29,7 @@ I have modified a lot from Matjek so that we have this theme for **the only purp
 
 ## How to use it?
 
-- Folow [this instruction](http://dinhanhthi.github.io/NoteTheme/how-to-use-notetheme) carefully.
+- Follow [this instruction](http://dinhanhthi.github.io/NoteTheme/how-to-use-notetheme) carefully.
 
 
 ## Contact & support
