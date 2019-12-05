@@ -1,8 +1,8 @@
 title: NoteTheme
 description: You cannot remember everything.
-baseurl: "/NoteTheme"
+baseurl: "/notetheme"
 url: ""
-repository: dinhanhthi/NoteTheme
+repository: dinhanhthi/notetheme
 paginate: 28
 
 banner: "/assets/res/banner.png" # site banner (load when someone share your page url)
