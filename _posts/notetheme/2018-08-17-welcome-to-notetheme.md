@@ -10,11 +10,11 @@ This theme is folked from [Matjek theme](https://shawnteoh.github.io/matjek/) wh
 
 I have modified a lot from Matjek so that we have this theme for **the only purpose of note-taking**. This theme is designed for ones who work much on **Maths and Code** with a lot of useful components.
 
-{% include more.html content="[Take a look with some showcases!](https://dinhanhthi.github.io/NoteTheme/notetheme-showcase)." %}
+{% include more.html content="[Take a look with some showcases!](https://dinhanhthi.github.io/notetheme/notetheme-showcase)." %}
 
 ## Features
 
-- Clean & **Simple** & **Beautiful** (see [demo](https://dinhanhthi.github.io/NoteTheme/))
+- Clean & **Simple** & **Beautiful** (see [demo](https://dinhanhthi.github.io/notetheme/))
 - Full supports and **frequently update**
 - Support a lot of useful **components for taking notes** (see [full list]({{ site.baseurl }}/how-to-use-notetheme))
 - Display **Table of Contents** automatically on a fix sidebar (and on the post content)
@@ -30,7 +30,7 @@ I have modified a lot from Matjek so that we have this theme for **the only purp
 
 ## How to install
 
-- Download from [Github repository](https://github.com/dinhanhthi/NoteTheme). Please change to branch **gh-pages** to see the whole code files.
+- Download from [Github repository](https://github.com/dinhanhthi/notetheme). Please change to branch **gh-pages** to see the whole code files.
 - Follow [this instruction]({{ site.baseurl }}/how-to-install-notetheme) carefully. I show you **from the beginning** how to create a github page with jekyll and then to apply NoteTheme and use it.
 
 

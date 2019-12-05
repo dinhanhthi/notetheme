@@ -8,7 +8,7 @@ comment: 1
 datacamp: 1
 ---
 
-In this tutorial, I suppose that you have already [installed NoteTheme]({{ site.baseurl }}/how-to-install-notetheme), just follow the ones you need and don't forget to leave a comment below.
+In this tutorial, I suppose that you have already [installed notetheme]({{ site.baseurl }}/how-to-install-notetheme), just follow the ones you need and don't forget to leave a comment below.
 
 {% include tip.html content="I'm not a native English speaker, please ignore my bad expressions." %}
 
@@ -621,9 +621,9 @@ tags: [algebra, function, theorem]
 2. Open file `_data\categories.yml` and add the new category you want
 	- `slug`: the id of this category, it will appear in the url, like
 		~~~
-		https://dinhanhthi.github.io/NoteTheme/categories#notetheme
+		https://dinhanhthi.github.io/notetheme/categories#notetheme
 		~~~
-	- `name` : the name of this catefory, it will appear on the site, like `NoteTheme`
+	- `name` : the name of this catefory, it will appear on the site, like `notetheme`
 
 ### Already-defined tags / categories
 

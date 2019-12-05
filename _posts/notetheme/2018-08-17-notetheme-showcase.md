@@ -205,7 +205,7 @@ If you need something more, just let me know in the comment below this post!
 <div class="step-number">
 </div>
 <div class="step-content" markdown="1">
-Download [this theme](https://github.com/dinhanhthi/NoteTheme).
+Download [this theme](https://github.com/dinhanhthi/notetheme).
 </div>
 </div>
 
